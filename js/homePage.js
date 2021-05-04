@@ -27,32 +27,56 @@ const postCarousel = document.querySelector(".post-carousel");
 const carouselButtonPrevious = document.querySelector(".carousel-btn-previous");
 const carouselButtonNext = document.querySelector(".carousel-btn-next");
 
+fetch(url, {
+  "method": "GET"
+})
+  .then(response => response.json())
+  .then(data => renderCarousel(data));
 
-
-const renderCarousel = () => {
-  
-
-  const postCarousell = document.querySelector(".post-carousel");
-  const startIndex = carouselState.pageIndex*3
-  postCarousell.innerHTML="";
-  posts.slice(startIndex, startIndex+3).forEach(post => {
-
-    let imageUrl = "";
-    if (post._embedded) {
-      imageUrl = post._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url;
-    }
-    console.log(imageUrl)
-
-    const htmlString = `
-            <div class="carousell-image">
-              <img src="${imageUrl}"/>
-            </div>`;
+const renderCarousel = (posts) => {
+  for (post of posts) {
+    console.log(post.title)
+    let imageUrl = post._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url;
+    let htmlString = `
     
+    <div class ="image-card-homepage">
+      <h2>${post.title.rendered}</h2>
+      <a class="navbar-links" href="post.html?id=${post.id}"><img src = "${imageUrl}"/></a>
+      ${post._embedded["wp:featuredmedia"][0].caption.rendered}
+      <button> Read more </button> 
+    </div>
+    
+    `;
+    postCarousel.innerHTML += htmlString;
 
-    const element = document.createElement('div');
-    element.innerHTML = htmlString;
-    postCarousell.appendChild(element);
-  })
+   
+
+
+  }
+
+
+  // const startIndex = carouselState.pageIndex*3
+  // postCarousell.innerHTML="";
+  // posts.slice(startIndex, startIndex+3).forEach(post => {
+
+  //   let imageUrl = "";
+  //   if (post._embedded) {
+  //     imageUrl = post._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url;
+  //   }
+  //   console.log(imageUrl)
+
+  //   const htmlString = `
+  //           <div class="carousell-images">
+
+  //             <img src="${imageUrl}"/>
+  //             <button>Read more</button>
+  //           </div>`;
+
+
+  //   // const element = document.createElement('div');
+  //   postCarousel.innerHTML += htmlString;
+  //   // postCarousell.appendChild(element);
+  // })
 }
 
 carouselButtonNext.addEventListener(`click`, () => {
@@ -67,7 +91,7 @@ carouselButtonNext.addEventListener(`click`, () => {
   if (carouselState.pageIndex > 0) {
     carouselButtonPrevious.disabled = false;
   }
-renderCarousel ();
+  renderCarousel();
 });
 
 
@@ -83,35 +107,37 @@ carouselButtonPrevious.addEventListener(`click`, () => {
 
   if (carouselState.pageIndex < 3) {
     carouselButtonNext.disabled = false
-  } 
-  renderCarousel ();
+  }
+  renderCarousel();
 });
 
-fetch(url)
-  .then(response => response.json())
-  .then(data => {
-    console.log(data);
-    // Loop trough and link the homepage posts to post.html
-    let postHtml = "";
-    data.forEach(post => {
-      posts.push(post);
-      // render carousel items
 
 
-      // console.log(post._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url)
-      const embedded = post._embedded;
-      if (embedded) {
-        console.log(embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url);
-      }
+    // // Loop trough and link the homepage posts to post.html
+    // let postHtml = "";
+    // data.forEach(post => {
+    //   posts.push(post);
+    //   // render carousel items
 
-      postHtml += `
-            <div> 
-                <a href ="/post.html?id=${post.id}"> ${post.title.rendered} </a>
-            </div>`
-    });
-    renderCarousel();
 
-    console.log(data)
-    postCarousel.innerHTML = postHtml;
+    //   // console.log(post._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url)
+    //   const embedded = post._embedded;
+    //   if (embedded) {
+    //     console.log(embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url);
+    //   }
 
-  });
+    //   postHtml += `
+    //         <div> 
+    //         <div class="carousell-image">
+
+    //           <img src="${imageUrl}"/>
+    //           <button>Read more</button>
+    //         </div>
+    //             <a href ="/post.html?id=${post.id}"> ${post.title.rendered} </a>
+    //         </div>`
+    // });
+    // // renderCarousel();
+
+    // console.log(data)
+    // postCarousel.innerHTML = postHtml;
+
