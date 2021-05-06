@@ -7,6 +7,8 @@ body {
     color: white;
 }
 
+
+
 img.logo {
     margin: 0;
     padding: 4px;
@@ -180,6 +182,93 @@ li {
 }
 
 @media (min-width: 900px) {
+
+    /*Home-page*/
+
+
+    /*Not finito*/
+    .container-homepge{
+        display: flex;
+        
+        overflow: hidden;
+        width: 1553px;
+        margin: auto;
+        position: relative;
+        
+    }
+
+    .post-carousel{
+        display: flex;
+        transform: translateX(-1523px);
+        
+        
+        
+        
+        text-align: center;
+        padding: 20px;
+        
+        }
+
+
+    .prev-button{
+        position: absolute;
+        left: 0%;
+        top: 50%;
+        z-index: 1
+    }
+
+    .next-button{
+        position: absolute;
+        right: 0%;
+        top: 50%;
+        z-index: 1
+    }
+
+
+
+
+    .image-card-homepage {
+        border-radius: 23px solid red; 
+       
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        box-shadow: rgba(230, 215, 215, 0.25) 0px 54px 55px, rgba(165, 154, 154, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(243, 243, 243, 0.09) 0px -3px 5px;
+        margin: 0 20px;
+        
+        }
+
+        .img-card-carousel{
+            padding-top: 20px;
+            width: 300px;
+            object-fit:cover;
+            height: 200px; 
+           background-color:#303336;
+        }
+
+.header-homepage {
+    font-size: 1rem;
+    color: white;
+}
+
+.container-allH2Cards-frontPage{
+    height: 100px;
+}
+.h2-image-forntPage{
+    font-size: 20px;
+}
+
+
+
+.image-card-homepage p{
+font-size: 16px;
+}
+
+
+
     
     .view-more-button-home-page {
 
@@ -187,9 +276,12 @@ li {
     background-color: rgb(97, 86, 116);
     border-radius: 30px;
     width: 6rem;
-    margin-left: 60px;
+    
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -236,6 +328,11 @@ li {
 
 /*Mobile first*/
 
+
+
+
+
+
 .link-decoration {
     text-decoration: none;
     color: white;
@@ -260,25 +357,3 @@ a {
 
 
 
-/*Home-page*/
-
-
-
-.image-card-homepage{
-    display: flex;
-    flex-direction: column;
-padding: 100px;
-}
-
-.header-homepage {
-    font-size: 1rem;
-    color: white;
-}
-
-.post-carousel{
-display: flex;
-flex-direction: row;
-justify-content: center;
-width: 100%;
-flex-wrap: wrap;
-}
