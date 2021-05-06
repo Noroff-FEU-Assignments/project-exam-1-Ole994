@@ -39,17 +39,20 @@ const renderCarousel = (posts) => {
     let imageUrl = post._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url;
     let htmlString = `
     
+      <p class="Call-to-action-text-homepage">Top 10 djs in 2021</p>
+      <p class="call-to-action-text-homepage">Djs now and then</p>
+      <p class="Call-to-action-text-homepage">What is hot?</p>
     <div class ="image-card-homepage">
       <h2>${post.title.rendered}</h2>
       <a class="navbar-links" href="post.html?id=${post.id}"><img src = "${imageUrl}"/></a>
       ${post._embedded["wp:featuredmedia"][0].caption.rendered}
-      <button> Read more </button> 
+      <a class="view-more-button-home-page" href="listOfBlogPosts.html">Read more</a>
     </div>
     
     `;
     postCarousel.innerHTML += htmlString;
 
-   
+
 
 
   }

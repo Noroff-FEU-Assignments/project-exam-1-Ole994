@@ -165,12 +165,7 @@ li {
     flex-direction: column;
 }
 
-.button-for-the-new-post-pictures {
 
-    color: white;
-    background-color: lightblue;
-    border-radius: 30px;
-}
 
 .achievements-as-dj {
     background-color: white;
@@ -184,7 +179,19 @@ li {
     color: black;
 }
 
-@media (min-width: 900px) {}
+@media (min-width: 900px) {
+    
+    .view-more-button-home-page {
+
+    color: white;
+    background-color: rgb(97, 86, 116);
+    border-radius: 30px;
+    width: 6rem;
+    margin-left: 60px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    text-align: center;
+}
+
 
 
 .box-for-every-single-post {
@@ -201,7 +208,7 @@ li {
     display: inline-block;
     
 }
-
+}
 
 
 
@@ -260,6 +267,7 @@ a {
 .image-card-homepage{
     display: flex;
     flex-direction: column;
+padding: 100px;
 }
 
 .header-homepage {
