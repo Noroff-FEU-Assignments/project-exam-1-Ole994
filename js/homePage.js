@@ -56,28 +56,28 @@ const renderCarousel = (posts) => {
   }
 
 
-  // const startIndex = carouselState.pageIndex*3
-  // postCarousell.innerHTML="";
-  // posts.slice(startIndex, startIndex+3).forEach(post => {
+  const startIndex = carouselState.pageIndex*3
+  postCarousell.innerHTML="";
+  posts.slice(startIndex, startIndex+3).forEach(post => {
 
-  //   let imageUrl = "";
-  //   if (post._embedded) {
-  //     imageUrl = post._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url;
-  //   }
-  //   console.log(imageUrl)
+    let imageUrl = "";
+    if (post._embedded) {
+      imageUrl = post._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url;
+    }
+    console.log(imageUrl)
 
-  //   const htmlString = `
-  //           <div class="carousell-images">
+    const htmlString = `
+            <div class="carousell-images">
 
-  //             <img src="${imageUrl}"/>
-  //             <button>Read more</button>
-  //           </div>`;
+              <img src="${imageUrl}"/>
+              <button>Read more</button>
+            </div>`;
 
 
-  //   // const element = document.createElement('div');
-  //   postCarousel.innerHTML += htmlString;
-  //   // postCarousell.appendChild(element);
-  // })
+    const element = document.createElement('div');
+    postCarousel.innerHTML += htmlString;
+    postCarousell.appendChild(element);
+  })
 }
 
 carouselButtonNext.addEventListener(`click`, () => {
