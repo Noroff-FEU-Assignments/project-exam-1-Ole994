@@ -7,30 +7,144 @@ body {
     color: white;
 }
 
-
-
-img.logo {
-    margin: 0;
-    padding: 4px;
+.navbar{
+    width: 100%;
+    height: 60px;
+    background: #090f1b;
+    position: fixed;
+    top:0;
+    left:0;
+    padding: 0 25px;
 }
 
-ul {
-    margin: 0;
-    padding: 0;
+.navbar .inner_navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
-li {
-    margin-left: 20px;
-    margin-top: 10px;
+.navbar .hamburger{
+    display: none;
+ }
+
+ .navbar .logo a{
+     font-weight: 700;
+     font-size: 24px;
+     letter-spacing: 3px;
+     color: #fff;
+ }
+
+ .navbar .logo a span{
+     color: #5bd485;
+ }
+
+ .navbar .menu ul{
+     display: flex;
+ }
+
+ .navbar .menu ul li a{
+     display: block;
+     width: 120px;
+     margin-right: 10px;
+     background: red;
+     text-align: center;
+     font-size: 14px;
+     text-transform: uppercase;
+     color: rgb(255, 255, 255);
+     padding: 10px;
+     border-radius: 25px;
+     letter-spacing: 2px;
+     transition: all 0.2 ease;
+ }
+
+ .navbar .menu ul li:last-child a{
+margin-right: 0;
+ }
+ .navbar .menu ul li a:hover,
+ .navbar .menu ul li a.active{
+     background: #5bd485;
+ } 
+
+ .main_container{
+     margin-top: 60px;
+     padding: 25px; 
+ }
+
+
+ @media (width: 992px){
+.navbar{
+    height: 100px;
+    padding: 12px; 
 }
 
-.header-backround-img{
+.navbar .inner_navbar{
+    flex-direction: column ;
+}
+
+.main_container{
+    margin-top: 100px;
+}
+
+}
+
+@media (max-width: 728px){
+    .navbar{
+        height: 60px;
+    }
+
+    .navbar .inner_navbar{
+        flex-direction: row;
+    }
+    .main_container{
+        margin-top: 60px;
+    }
+    .navbar .menu ul{
+        position: absolute;
+        top: 60px;
+        left: 0;
+        display: block;
+        background: #090f1b;
+        width: 100%;
+    }
+    .navbar .menu ul li{
+        padding: 10px;
+    }
+    .navbar .menu ul li a{
+        width: 100%;
+        padding: 12px
+    }
+    .navbar .hamburger{
+        display: block;
+        position: absolute;
+        top: 15;
+        right: 25px;
+        color: rgb(255, 255, 255);
+        font-size: 24px;
+
+    }
+}
+  
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+/* .header-backround-img{
     background-image: url(/pictures/Hero-picture-homepage.jpg);
     min-height: 50vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
-}
+} */
 
 /* @media screen and (min-width: 900px) {
     .header-backround-img {
@@ -90,7 +204,7 @@ li {
         align-items: center;
     }
 
-} */ */
+} */ 
 
 /* .menu-btn{
     position: relative;
@@ -192,14 +306,18 @@ li {
         
         overflow: hidden;
         width: 1553px;
-        margin: auto;
+        margin: 109px;
         position: relative;
+        
         
     }
 
     .post-carousel{
         display: flex;
         transform: translateX(-1523px);
+        justify-content: center;
+        
+        
         
         
         
@@ -301,10 +419,26 @@ font-size: 16px;
     
 }
 
+.achievements-as-dj{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.key-figures-of-my-work{
+    text-align: center;
+}
 
 
 
 
+
+
+
+
+
+
+/* Mediaqueries under desktop-size*/
 @media (max-width: 1556px) { 
 .container-homepge{
 
@@ -319,7 +453,7 @@ width: 780px ;
     width: 420px;
     margin: auto;
 
-}
+} }
     
 
     
@@ -366,30 +500,10 @@ width: 780px ;
 
 
 
-/*Mobile first*/
 
 
 
 
 
 
-.link-decoration {
-    text-decoration: none;
-    color: white;
-}
 
-a {
-    text-decoration: none;
-    color: white;
-}
-
-
-
-
-
-.logo {
-    width: 70px;
-    border-radius: 50%;
-    margin-top: 150px;
-    margin-left: 20px;
-}
