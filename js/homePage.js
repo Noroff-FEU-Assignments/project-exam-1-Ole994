@@ -16,6 +16,20 @@
 
 // _embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url
 //laget en variabel som holder på blogposter, den settes i fetchcallet mot restapiet
+
+
+
+// var hamburger = document.querySelector (".hamburger");
+// var menu = document.querySelector (".menu");
+
+// hamburger.addEventListener ("click", functiion (){
+//   menu.classList.toogle("active");
+
+
+// })
+
+
+
 const posts = [];
 const carouselState = {
   pageIndex: 0
@@ -49,15 +63,11 @@ const renderCarousel = (posts) => {
     
     `;
     postCarousel.innerHTML += htmlString;
-
-
-
-
   }
 
 
   const startIndex = carouselState.pageIndex*3
-  postCarousell.innerHTML="";
+  // postCarousell.innerHTML="";
   posts.slice(startIndex, startIndex+3).forEach(post => {
 
     let imageUrl = "";
@@ -74,26 +84,26 @@ const renderCarousel = (posts) => {
             </div>`;
 
 
-    const element = document.createElement('div');
-    postCarousel.innerHTML += htmlString;
-    postCarousell.appendChild(element);
+    // const element = document.createElement('div');
+    // postCarousel.innerHTML += htmlString;
+    // postCarousell.appendChild(element);
   })
 }
 
-carouselButtonNext.addEventListener(`click`, () => {
-  carouselState.pageIndex++; console.log(carouselState)
-  if (carouselState.pageIndex === 3) {
-    carouselButtonNext.disabled = true
-  }
-  else {
-    carouselButtonNext.disabled = false;
-  }
+// carouselButtonNext.addEventListener(`click`, () => {
+//   carouselState.pageIndex++; console.log(carouselState)
+//   if (carouselState.pageIndex === 3) {
+//     carouselButtonNext.disabled = true
+//   }
+//   else {
+//     carouselButtonNext.disabled = false;
+//   }
 
-  if (carouselState.pageIndex > 0) {
-    carouselButtonPrevious.disabled = false;
-  }
-  renderCarousel();
-});
+//   if (carouselState.pageIndex > 0) {
+//     carouselButtonPrevious.disabled = false;
+//   }
+//   renderCarousel();
+// });
 
 
 
@@ -141,4 +151,6 @@ carouselButtonPrevious.addEventListener(`click`, () => {
 
     // console.log(data)
     // postCarousel.innerHTML = postHtml;
+
+
 
