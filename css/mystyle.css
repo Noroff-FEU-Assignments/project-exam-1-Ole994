@@ -1,3 +1,8 @@
+
+
+
+
+
 body {
     margin: 0;
     padding: 0;
@@ -8,8 +13,26 @@ body {
     text-decoration: none;
 }
 
+.backround-img{
+    width: 100%;
+}
 
+p{
+    font-family: 'Rubik', sans-serif;
+}
 /*Header/nav*/
+
+li{
+    list-style-type: none;
+}
+
+.ul-navbar{
+    margin-right: 55px;
+}
+.div.menu :hover{
+background-color: blueviolet;
+
+}
 .navbar{
     width: 100%;
     height: 60px;
@@ -40,9 +63,7 @@ body {
      color: #fff;
  }
 
- .navbar .logo a span{
-     color: #5bd485;
- }
+ 
 
  .navbar .menu ul{
      display: flex;
@@ -65,10 +86,7 @@ body {
  .navbar .menu ul li:last-child a{
 margin-right: 0;
  }
- .navbar .menu ul li a:hover,
- .navbar .menu ul li a.active{
-     background: #5bd485;
- } 
+
 
  .main_container{
      margin-top: 60px;
@@ -139,142 +157,6 @@ margin-right: 0;
 }
   
 
-/* .header-backround-img{
-    background-image: url(/pictures/Hero-picture-homepage.jpg);
-    min-height: 50vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
-} */
-
-/* @media screen and (min-width: 900px) {
-    .header-backround-img {
-        height: 100vh;
-        background-position: 0 -5rem;
-    }
-}
-
-
-
-
-
-.navbar ul {
-    display: flex;
-    width: 100%;
-    align-items: right;
-}
-
-.navbar li {
-    list-style-type: none;
-    padding: 1rem;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: white;
-}
-
-.navbar-logo {
-    flex: 1;
-    font-size: 1.5rem;
-    user-select: none;
-}
-
-.navbar-toogle {
-    display: none;
-}
-
-.navbar-links:hover {
-    color: lightblue;
-}
-
-@media (max-width: 600px) {
-    .navbar ul {
-        flex-wrap: wrap;
-    }
-
-    .navbar-toogle {
-        display: block;
-    }
-
-    .navbar-links {
-        /* display: none; */
-        /* display: flex;
-        width: 100%;
-        text-align: center;
-        align-items: center;
-    }
-
-} */ 
-
-/* .menu-btn{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 80px;
-    cursor: pointer;
-    transition: all 5.s ease-in-out;
-    
-    margin: 35px;
-}
-
-
-.menu-btn__burger {
-    width: 50px;
-    height: 6px;
-    background: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px brown;
-    transition: all .5s ease-in-out;
-} */
-
-/* .menu-btn__burger::before,
-.menu-btn__burger::after{
-    content: '';
-    position: absolute;
-    width: 50px;
-    height: 6px;
-    background: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px brown;
-    transition: all .5s ease-in-out;
-}
-
-.menu-btn__burger::before{
-    transform: translateY(-16px);
-}
-
-.menu-btn__burger::after{
-    transform: translateY(-16px);
-}
-.menu-btn__burger::after{
-    transform: translateY(16px);
-}
-
-
-/*Animation*/
-/* .menu-btn.open .menu-btn__burger{
-    transform: translateX(-50px);
-    background: transparent;
-    box-shadow: none;
-}
-
-
-.menu-btn.open .menu-btn__burger::before{
-   transform: rotate(45deg) translate(35px, -35px);
-}
-
-.menu-btn.open .menu-btn__burger::after{
-    transform: rotate(-45deg) translate(35px, 35px);
- }   */
-
-/*----------------------------------------------------------------------------------*/
-
-
-
-
 /*Homepage*/
 .pictures-of-new-posts {
     display: flex;
@@ -291,6 +173,7 @@ margin-right: 0;
 
 .achievements-as-dj {
     background-color: white;
+    size: 100%;
 }
 
 .key-figures-of-my-work {
@@ -309,7 +192,7 @@ margin-right: 0;
     display: flex;
     overflow: hidden;
     width: 1553px;
-    margin: 109px;
+    margin: 80px;
     position: relative;
     /*----------------*/
 }
@@ -336,10 +219,6 @@ margin-right: 0;
     top: 50%;
     z-index: 1
 }
-
-
-
-
 .image-card-homepage {
     border-radius: 23px solid red;       
     width: 300px;
@@ -359,6 +238,8 @@ margin-right: 0;
     object-fit:cover;
     height: 200px; 
     background-color:#303336;
+    display: flex;
+    align-items: center;
 }
 
 .header-homepage {
@@ -388,10 +269,6 @@ a {
     text-decoration: none;
     color: white;
 }
-
-
-
-
 
 .logo {
     width: 70px;
@@ -430,7 +307,14 @@ a {
     text-align: center;
 }
 
+.about-me-frontpage-img{
+    max-width: 400px;
+}
 
+.aboutMe-frontpage-div{
+    display: flex;
+    align-items: center;
+}
 
 
 
@@ -445,6 +329,13 @@ a {
 
 width: 780px ;
 }
+.backround-img{ max-width: 100%;
+}
+.navbar .hamburgermenu{
+    display: flex;
+    
+    
+ }
 }
 
 
@@ -453,19 +344,19 @@ width: 780px ;
     
     width: 420px;
     margin: auto;
-
-} }
+} 
+.navbar .hamburgermenu{
+    display: flex;  
+ }
+.backround-img{
+    max-width: 100%;
+}
+.navbar .hamburgermenu{
+    display: flex;
     
-
     
-    
-
-
-
-  
- 
-
-
+ }
+}
 
 
 

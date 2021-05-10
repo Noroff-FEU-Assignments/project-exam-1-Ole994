@@ -41,7 +41,7 @@ const postCarousel = document.querySelector(".post-carousel");
 const carouselButtonPrevious = document.querySelector(".carousel-btn-previous");
 const carouselButtonNext = document.querySelector(".carousel-btn-next");
 
-fetch(url, {
+fetch(url, { 
   "method": "GET"
 })
   .then(response => response.json())
