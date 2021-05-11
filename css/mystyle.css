@@ -1,8 +1,3 @@
-
-
-
-
-
 body {
     margin: 0;
     padding: 0;
@@ -63,7 +58,9 @@ background-color: blueviolet;
      color: #fff;
  }
 
- 
+.hidden {
+    display: none !important;
+}
 
  .navbar .menu ul{
      display: flex;
@@ -190,8 +187,7 @@ margin-right: 0;
     /*Not finito*/
 .container-homepge{
     display: flex;
-    overflow: hidden;
-    width: 1553px;
+    /* width: 1553px; */
     margin: 80px;
     position: relative;
     /*----------------*/
@@ -199,7 +195,7 @@ margin-right: 0;
 
 .post-carousel{
     display: flex;
-    transform: translateX(-1523px);
+    
     justify-content: center;
     text-align: center;
     padding: 20px;
@@ -221,12 +217,12 @@ margin-right: 0;
 }
 .image-card-homepage {
     border-radius: 23px solid red;       
-    width: 300px;
-    display: flex;
-    flex-direction: column;
+    /* width: 300px; */
+    
+    flex: 1;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    
     box-shadow: rgba(230, 215, 215, 0.25) 0px 54px 55px, rgba(165, 154, 154, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(243, 243, 243, 0.09) 0px -3px 5px;
     margin: 0 20px;
         
@@ -234,12 +230,13 @@ margin-right: 0;
 
 .img-card-carousel{
     padding-top: 20px;
-    width: 300px;
+    min-width: 250px;
     object-fit:cover;
     height: 200px; 
     background-color:#303336;
     display: flex;
     align-items: center;
+    
 }
 
 .header-homepage {
@@ -301,6 +298,7 @@ a {
     display: flex;
     justify-content: space-between;
     text-align: center;
+    padding: 0 5rem;
 }
 
 .key-figures-of-my-work{

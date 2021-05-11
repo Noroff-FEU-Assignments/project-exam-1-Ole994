@@ -1,156 +1,123 @@
-// Here comes the hamburger menu
+const url = "https://olekorvald.no/wp-json/wp/v2/posts?_embed=wp:featuredmedia"
 
-// const menuBtn = document.querySelector (`.menu-btn`);
-// let menuOpen = false;
-// menuBtn.addEventListener (`click`, () =>{
-//     if (!menuOpen){
-//         menuBtn.classList.add(`open`);
-//         menuOpen = true;
-//     }
-//     else {
-//         menuBtn.classList.remove (`open`);
-//         menuOpen = false
-//     }
+// HTML Dom elementer. 
+const postCarousel = document.querySelector(".post-carousel");
+const carouselButtonPrevious = document.querySelector(".prev-button");
+const carouselButtonNext = document.querySelector(".next-button");
+
+// Dette er tilstand som vi bruker. F.eks. lagrer vi alle postene i posts, og 
+// bruker disse til å rendre de på nytt når vi trenger det. 
+
+let posts = [];
+let activeCarouselStart = 0;
+let numberOfCarousellItems = 3;
+
+fetch(url, {
+    "method": "GET"
+  })
+  .then(response => response.json())
+  .then(data => {
+    posts = data;
+    renderCarousel(data);
+  });
+
+/* Sjekker with på vindu for å tilpasse antall elementer i karusellen*/
+// Vi kan bruke window.innerWidth for å sjekke hvor vid skjermen er
+// og sette antall elementer i karusell vi ønsker å vise.
+
+// Kan brukes sammen med resize-event.
+
+// window.addEventListener("resize", () => {
+//   // Endre antall kort vi viser ved å endre numberOfCarousellItems. 
+//   renderCarousel(posts);
 // });
 
+// if (window.innerWidth < 500) {
+//   numberOfCarousellItems = 1;
+// } else if (window.innerWidth < 700) {
+//   numberOfCarousellItems = 2;
+// }
 
-// _embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url
-//laget en variabel som holder på blogposter, den settes i fetchcallet mot restapiet
-
-
-
-// var hamburger = document.querySelector (".hamburger");
-// var menu = document.querySelector (".menu");
-
-// hamburger.addEventListener ("click", functiion (){
-//   menu.classList.toogle("active");
-
-
-// })
-
-
-
-const posts = [];
-const carouselState = {
-  pageIndex: 0
-};
-
-
-const url = "https://olekorvald.no/wp-json/wp/v2/posts?_embed=wp:featuredmedia"
-const postCarousel = document.querySelector(".post-carousel");
-const carouselButtonPrevious = document.querySelector(".carousel-btn-previous");
-const carouselButtonNext = document.querySelector(".carousel-btn-next");
-
-fetch(url, { 
-  "method": "GET"
-})
-  .then(response => response.json())
-  .then(data => renderCarousel(data));
-
+/*skriver dom element for karusellen */
 const renderCarousel = (posts) => {
-  for (post of posts) {
-    console.log(post.title)
+  console.log(posts)
+
+  // Vi tømmer DOM-treet for elementer, siden vi skal bygge de nå 
+  // på nytt med nye data. 
+
+  postCarousel.innerHTML = "";
+
+  /*entries får index og verdi*/
+
+  // index = teller opp indeks til postene vi iterer igjennom
+  // F.eks. 10 poster -> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+  // post = faktisk post fra Wordpress
+  // posts.entries() = gir oss par av index og post. [0, post1], [1, post2].... [9, post10]
+
+  for (let [index, post] of posts.entries()) {
+
+    // showCard er true dersom index er større eller lik activeCarouselStart og
+    // og mindre eller lik activeCarouselEnd. 
+    // Dette definerer hvilket intervall vi ønsker å vise aktive poster i karusellen.
+
+
+    // Hvis du er innenfor intervallet start-index og start-index + antall kort som skal vises:
+    // så vis kort (ved å ikke legge på hidden-klasse), ellers legg på "hidden"-klasse. 
+
+    const showCard = index >= activeCarouselStart && index <= (activeCarouselStart + numberOfCarousellItems);
+    let showCardClass = '';
+    if (!showCard) {
+      showCardClass = 'hidden'
+    }
+    /* Html*/
     let imageUrl = post._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url;
+    let excerpt = post.excerpt.rendered;
+
     let htmlString = `
-    
-    
-    <div class ="image-card-homepage">
-      <div class="container-allH2Cards-frontPage"> <h2 class="h2-image-forntPage">${post.title.rendered}</h2> </div>
+    <div class="image-card-homepage ${showCardClass}">
+      <div class="container-allH2Cards-frontPage">
+        <h2 class="h2-image-forntPage">${post.title.rendered}</h2>
+      </div>
       <a class="navbar-links" href="post.html?id=${post.id}"><img class= "img-card-carousel"src = "${imageUrl}"/></a>
-      ${post._embedded["wp:featuredmedia"][0].caption.rendered}
       <a class="view-more-button-home-page" href="listOfBlogPosts.html">Read more</a>
-    </div>
-    
-    `;
+    </div>`;
+
     postCarousel.innerHTML += htmlString;
   }
-
-
-  const startIndex = carouselState.pageIndex*3
-  // postCarousell.innerHTML="";
-  posts.slice(startIndex, startIndex+3).forEach(post => {
-
-    let imageUrl = "";
-    if (post._embedded) {
-      imageUrl = post._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url;
-    }
-    console.log(imageUrl)
-
-    const htmlString = `
-            <div class="carousell-images">
-
-              <img src="${imageUrl}"/>
-              <button>Read more</button>
-            </div>`;
-
-
-    // const element = document.createElement('div');
-    // postCarousel.innerHTML += htmlString;
-    // postCarousell.appendChild(element);
-  })
 }
 
-// carouselButtonNext.addEventListener(`click`, () => {
-//   carouselState.pageIndex++; console.log(carouselState)
-//   if (carouselState.pageIndex === 3) {
-//     carouselButtonNext.disabled = true
-//   }
-//   else {
-//     carouselButtonNext.disabled = false;
-//   }
-
-//   if (carouselState.pageIndex > 0) {
-//     carouselButtonPrevious.disabled = false;
-//   }
-//   renderCarousel();
-// });
-
-
-
+/**/
 carouselButtonPrevious.addEventListener(`click`, () => {
-  carouselState.pageIndex--; console.log(carouselState)
-  if (carouselState.pageIndex === 0) {
-    carouselButtonPrevious.disabled = true
-  }
-  else {
-    carouselButtonPrevious.disabled = false
+  // Vi trekker fra en fra indeks for start på hvilke kort vi vider,
+  // dersom vi ikke går under 0. Viser alltid elementer i karusellen fra
+  // index 0 og oppover. 
+
+  if (activeCarouselStart > 0) {
+    activeCarouselStart--;
   }
 
-  if (carouselState.pageIndex < 3) {
-    carouselButtonNext.disabled = false
-  }
-  renderCarousel();
+  // Etter at vi har oppdatert variabel for hvilken indeks vi skal vise
+  // karusell-element for, må vi skrive nye HTML-elementer til DOM-treet. 
+  // I praksis: oppdatere karusell med riktige elementer. 
+  renderCarousel(posts);
 });
 
+carouselButtonNext.addEventListener(`click`, () => {
+  /*setter index til det neste bildet som skal vises til venstre*/
+  // Vi øker denne, og øker dermed intervallet av elementer i karusellen.
+  // fra 0 -> 1, så går vi fra intervallet 0 -> 3 til 1 -> 4.
 
+  activeCarouselStart++;
 
-    // // Loop trough and link the homepage posts to post.html
-    // let postHtml = "";
-    // data.forEach(post => {
-    //   posts.push(post);
-    //   // render carousel items
+  /*Hvis en har komt til slutten av postene, begynn fra start*/
+  // Alternativt kan vi slå av knappen? 
+  if (activeCarouselStart === posts.length) {
+    activeCarouselStart = 0;
+  }
 
-
-    //   // console.log(post._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url)
-    //   const embedded = post._embedded;
-    //   if (embedded) {
-    //     console.log(embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url);
-    //   }
-
-    //   postHtml += `
-    //         <div> 
-    //         <div class="carousell-image">
-
-    //           <img src="${imageUrl}"/>
-    //           <button>Read more</button>
-    //         </div>
-    //             <a href ="/post.html?id=${post.id}"> ${post.title.rendered} </a>
-    //         </div>`
-    // });
-    // // renderCarousel();
-
-    // console.log(data)
-    // postCarousel.innerHTML = postHtml;
-
-
-
+  // Etter at vi har oppdatert variabel for hvilken indeks vi skal vise
+  // karusell-element for, må vi skrive nye HTML-elementer til DOM-treet. 
+  // I praksis: oppdatere karusell med riktige elementer. 
+  renderCarousel(posts);
+});
