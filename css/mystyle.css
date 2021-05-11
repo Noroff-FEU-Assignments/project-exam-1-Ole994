@@ -8,153 +8,99 @@ body {
     text-decoration: none;
 }
 
-.backround-img{
-    width: 100%;
-}
+
 
 p{
     font-family: 'Rubik', sans-serif;
 }
+
+
 /*Header/nav*/
 
+header{
+    background-image: url(/pictures/Hero-picture-homepage.jpg);
+    height: 80vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y:-300px;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+
+.h1-frontpage{
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 200px;
+
+}
+.backround-img{
+    width: 100%;
+    position: absolute;
+    top:0;
+    
+}
 li{
     list-style-type: none;
 }
-
-.ul-navbar{
-    margin-right: 55px;
-}
-.div.menu :hover{
-background-color: blueviolet;
-
-}
-.navbar{
-    width: 100%;
-    height: 60px;
-    background: #090f1b;
-    position: fixed;
-    top:0;
-    left:0;
-    padding: 0 25px;
-}
-
-.navbar .inner_navbar{
+.navbar-desktop {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    margin: 0;
+    height: 20%;
+
+    margin-top: 20px;   
+    
 }
 
-.navbar .hamburgermenu{
-    display: none;
-    
- }
+.logo-div{
+    margin-top: 20px;
+}
 
- .navbar .logo a{
-     font-weight: 700;
-     font-size: 24px;
-     letter-spacing: 3px;
-     color: #fff;
- }
+
+.navbar-media-queries ul{
+    display: flex;
+    align-items: center;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+    .logo-picture{
+        width: 100px;
+
+    }
+
+
+    
+@media (min-width: 728px){
+ul{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+}    .navbar-media-queries{
+        display: none;
+    }
+}
+
+/*Homepage*/
 
 .hidden {
     display: none !important;
 }
 
- .navbar .menu ul{
-     display: flex;
- }
-
- .navbar .menu ul li a{
-     display: block;
-     width: 120px;
-     margin-right: 10px;
-     text-align: center;
-     font-size: 14px;
-     text-transform: uppercase;
-     color: #fff;
-     padding: 10px;
-     letter-spacing: 2px;
-     transition: all 0.2 ease;
-     
- }
-
- .navbar .menu ul li:last-child a{
-margin-right: 0;
- }
-
-
- .main_container{
-     margin-top: 60px;
-     padding: 25px; 
- }
-
-
- @media (width: 992px){
-.navbar{
-    height: 100px;
-    padding: 12px; 
-}
-
-.navbar .inner_navbar{
-    flex-direction: column ;
-}
-
-.main_container{
-    margin-top: 100px;
-}
-
-}
-
-@media (max-width: 728px){
-    .navbar{
-        height: 60px;
-    }
-
-    .navbar .inner_navbar{
-        flex-direction: row;
-    }
-    .main_container{
-        margin-top: 60px;
-    }
-    .navbar .menu ul{
-        position: absolute;
-        top: 60px;
-        left: 0;
-        display: block;
-        background: #090f1b;
-        width: 100%;
-    }
-    .navbar .menu ul li{
-        padding: 10px;
-    }
-    .navbar .menu ul li a{
-        width: 100%;
-        padding: 12px
-    }
-    .navbar .hamburger{
-        display: block;
-        position: absolute;
-        top: 15;
-        right: 25px;
-        color: rgb(255, 255, 255);
-        font-size: 24px;
-        cursor: pointer;
-        transition: all 0.2s ease;
-
-    }
-    .navbar .menu{
-        display: none
-    }
-    
-    .navbar .menu.active{
-        display: block;
-    }
-}
-  
-
-/*Homepage*/
 .pictures-of-new-posts {
     display: flex;
     width: 100%;
@@ -170,6 +116,7 @@ margin-right: 0;
 
 .achievements-as-dj {
     background-color: white;
+    
     size: 100%;
 }
 
@@ -180,16 +127,14 @@ margin-right: 0;
 .h3-for-front-page {
     color: black;
 }
-
-
-
-
     /*Not finito*/
 .container-homepge{
     display: flex;
     /* width: 1553px; */
     margin: 80px;
+    flex-direction: column;
     position: relative;
+    
     /*----------------*/
 }
 
@@ -216,7 +161,7 @@ margin-right: 0;
     z-index: 1
 }
 .image-card-homepage {
-    border-radius: 23px solid red;       
+    border-radius: 232px solid red;       
     /* width: 300px; */
     
     flex: 1;
@@ -236,45 +181,8 @@ margin-right: 0;
     background-color:#303336;
     display: flex;
     align-items: center;
-    
 }
 
-.header-homepage {
-    font-size: 1rem;
-    color: white;
-}
-
-.container-allH2Cards-frontPage{
-    height: 100px;
-}
-.h2-image-forntPage{
-    font-size: 20px;
-}
-
-
-
-.image-card-homepage p{
-font-size: 16px;
-}
-
-.link-decoration {
-    text-decoration: none;
-    color: white;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-.logo {
-    width: 70px;
-    border-radius: 50%;
-    margin-top: 150px;
-    margin-left: 20px;
-}
-
-    
     .view-more-button-home-page {
 
     color: white;
@@ -317,83 +225,5 @@ a {
 
 
 
-
-
-
-
-/* Mediaqueries under desktop-size*/
-@media (max-width: 1556px) { 
-.container-homepge{
-
-width: 780px ;
-}
-.backround-img{ max-width: 100%;
-}
-.navbar .hamburgermenu{
-    display: flex;
-    
-    
- }
-}
-
-
-@media (max-width: 800px) { 
-    .container-homepge{
-    
-    width: 420px;
-    margin: auto;
-} 
-.navbar .hamburgermenu{
-    display: flex;  
- }
-.backround-img{
-    max-width: 100%;
-}
-.navbar .hamburgermenu{
-    display: flex;
-    
-    
- }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*Contact-page*/
 

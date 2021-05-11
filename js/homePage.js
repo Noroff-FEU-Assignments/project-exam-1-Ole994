@@ -6,7 +6,7 @@ const carouselButtonPrevious = document.querySelector(".prev-button");
 const carouselButtonNext = document.querySelector(".next-button");
 
 // Dette er tilstand som vi bruker. F.eks. lagrer vi alle postene i posts, og 
-// bruker disse til å rendre de på nytt når vi trenger det. 
+// bruker disse til å endre de på nytt når vi trenger det. 
 
 let posts = [];
 let activeCarouselStart = 0;
