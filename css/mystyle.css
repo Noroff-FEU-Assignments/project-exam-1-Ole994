@@ -19,12 +19,12 @@ p{
 
 header{
     background-image: url(/pictures/Hero-picture-homepage.jpg);
-    height: 80vh;
+    height: 50vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y:-300px;
-    width: 100%;
+    
     padding: 0;
     display: flex;
     justify-content: space-around;
@@ -81,6 +81,23 @@ a{
     }
 
 
+
+    @media (max-width: 728px){
+
+    .logo-div{
+    display: none;
+}
+    .navbar-desktop{
+        display: none;
+}
+header img{
+
+height: 800px;
+width: 375px;
+
+}
+
+}
     
 @media (min-width: 728px){
 ul{
@@ -90,7 +107,9 @@ ul{
     align-items: center;
     width: 50%;
     margin: auto;
-}    .navbar-media-queries{
+}    
+
+.navbar-media-queries{
         display: none;
     }
 }
@@ -140,8 +159,6 @@ ul{
 
 .post-carousel{
     display: flex;
-    
-    justify-content: center;
     text-align: center;
     padding: 20px;
 }
@@ -172,15 +189,19 @@ ul{
     margin: 0 20px;
         
 }
-
+/*prøvd*/
 .img-card-carousel{
-    padding-top: 20px;
+    padding-top: 40px;
+    padding-right: 5px;
+    padding-left: 5px;
     min-width: 250px;
     object-fit:cover;
     height: 200px; 
     background-color:#303336;
     display: flex;
-    align-items: center;
+    align-items:center;
+    justify-content: center;
+    flex-direction: row;
 }
 
     .view-more-button-home-page {
@@ -188,17 +209,15 @@ ul{
     color: white;
     background-color: rgb(97, 86, 116);
     border-radius: 30px;
-    width: 6rem;
-    
+    width: 100px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    margin-top: 20px;
+    margin-left:70px
 
-.carousell-image{
-    display: inline-block;
     
 }
 
@@ -226,4 +245,141 @@ ul{
 
 
 /*Contact-page*/
+
+.wrapper{
+    width: 100%;
+    max-width: 100%;
+    margin: 10px auto 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.content{
+    text-align: center;
+}
+
+.content h1 {
+    letter-spacing: 1px;
+}
+
+.form{
+    width: 100%;
+    display: flex;
+    
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+.top-form,
+.middle-form,
+.bottom-form{
+    
+    min-height: 65px;
+    margin: 20px;
+}
+
+
+.form input [type="text"],
+.form textarea{
+    padding: 15px 5px;
+    box-sizing: border-box;
+    width: 100%;
+    border: 2px solid rgb(177, 36, 36)
+}
+
+/*About me*/
+.picture-and-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.picture-div-about-me-page{
+    padding: 20px 0 5px 0;
+}
+
+.image-about-me-page{max-width: 100%;
+    border-radius: 70px;
+    box-shadow: rgba(140, 154, 192, 0.25) 0px 54px 55px, rgba(144, 155, 190, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(136, 111, 111, 0.09) 0px -3px 5px;
+    
+}
+
+
+.text-about-me-page{
+    padding: 20px;
+}
+
+.h1-abut-me-page{    
+}
+
+.h2-abut-me-page{}
+
+.p-about-me-page{}
+
+.more-info-about-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+}
+
+.textbox-1,
+.textbox-2,
+.textbox-3{
+    color: black;
+}
+
+@media (min-width: 1110px){
+.picture-and-text-about-me-page{
+         display: flex;         
+         justify-content:space-evenly;
+         box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+         margin-left: 0;
+     }
+    .image-about-me-page{
+        width: 800px;
+        height: 900px;
+        
+    }
+     .picture-div-about-me-page{
+         width: 35%;
+         margin: 0;
+         
+     }
+
+
+     .text-about-me-page{
+         width: 50%;
+     }
+
+     .more-info-about-page{
+         display: flex;
+         flex-direction: row;
+         justify-content: space-evenly;
+     }
+
+     .textbox-1{
+    
+     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
