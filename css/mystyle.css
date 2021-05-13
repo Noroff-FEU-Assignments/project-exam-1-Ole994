@@ -242,6 +242,17 @@ ul{
 }
 
 
+@media (min-width: 300px){
+
+    header {
+        width: 100%;
+        height: 800px; 
+
+
+    }
+
+
+}
 
 
 /*Contact-page*/

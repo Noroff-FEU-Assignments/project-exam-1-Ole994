@@ -27,16 +27,21 @@ fetch(url, {
 
 // Kan brukes sammen med resize-event.
 
-// window.addEventListener("resize", () => {
+window.addEventListener("resize", () => {
 //   // Endre antall kort vi viser ved å endre numberOfCarousellItems. 
-//   renderCarousel(posts);
-// });
+  renderCarousel(posts);
+});
 
-// if (window.innerWidth < 500) {
-//   numberOfCarousellItems = 1;
-// } else if (window.innerWidth < 700) {
-//   numberOfCarousellItems = 2;
-// }
+if (window.innerWidth < 700) {
+  numberOfCarousellItems = 0;
+} 
+else if (window.innerWidth > 900) {
+  numberOfCarousellItems = 3;
+}
+
+else if (window.innerWidth > 700) {
+  numberOfCarousellItems = 2;
+}
 
 /*skriver dom element for karusellen */
 const renderCarousel = (posts) => {
