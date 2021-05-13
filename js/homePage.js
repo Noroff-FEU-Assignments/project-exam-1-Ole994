@@ -1,4 +1,4 @@
-const url = "https://olekorvald.no/wp-json/wp/v2/posts?_embed=wp:featuredmedia"
+const url = "https://olekorvald.no/wp-json/wp/v2/posts?_embed=wp:featuredmedia&per_page=100"
 
 // HTML Dom elementer. 
 const postCarousel = document.querySelector(".post-carousel");
@@ -32,16 +32,17 @@ window.addEventListener("resize", () => {
   renderCarousel(posts);
 });
 
-if (window.innerWidth < 700) {
+if (window.innerWidth < 1100) {
   numberOfCarousellItems = 0;
 } 
-else if (window.innerWidth > 900) {
-  numberOfCarousellItems = 3;
-}
+// else if (window.innerWidth < 1100) {
+//   numberOfCarousellItems = 3;
+// }
 
-else if (window.innerWidth > 700) {
-  numberOfCarousellItems = 2;
-}
+// else if (window.innerWidth < 700) {
+//   numberOfCarousellItems = 2;
+// }
+
 
 /*skriver dom element for karusellen */
 const renderCarousel = (posts) => {
@@ -85,7 +86,8 @@ const renderCarousel = (posts) => {
         <h2 class="h2-image-forntPage">${post.title.rendered}</h2>
       </div>
       <a class="navbar-links" href="post.html?id=${post.id}"><img class= "img-card-carousel"src = "${imageUrl}"/></a>
-      <a class="view-more-button-home-page" href="listOfBlogPosts.html">Read more</a>
+      <div class= "p-inside-carousell-image-card">${post.excerpt.rendered}</div>
+      <a class="view-more-button-home-page" href="post.html">Read more</a>
     </div>`;
 
     postCarousel.innerHTML += htmlString;
@@ -126,3 +128,6 @@ carouselButtonNext.addEventListener(`click`, () => {
   // I praksis: oppdatere karusell med riktige elementer. 
   renderCarousel(posts);
 });
+
+
+
