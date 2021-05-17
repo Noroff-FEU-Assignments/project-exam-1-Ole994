@@ -156,16 +156,6 @@ p{
     }
 }
 
-
-
-
-
-
-
-
-
-
-
 /*Homepage Styles*/
 
 .header-dj-background{
@@ -229,7 +219,6 @@ a{
     .logo-picture{
         width: 100px;
         border-radius: 50%;
-
     }
 
 
@@ -261,7 +250,7 @@ ul{
 
 
 
-/*Footer*/
+
 
 
 
@@ -286,8 +275,7 @@ ul{
 
 
 .achievements-as-dj {
-    background-color: white;
-    
+
     size: 100%;
 }
 
@@ -296,7 +284,7 @@ ul{
 }
 
 .h3-for-front-page {
-    color: black;
+    color: rgb(255, 255, 255);
 }
     /*Not finito*/
 .container-homepge{
@@ -458,49 +446,50 @@ ul{
 
 
 /*Contact-page*/
+.contact-wrap{
 
-.wrapper{
-    width: 100%;
-    max-width: 100%;
-    margin: 10px auto 0;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.content{
-    text-align: center;
-}
-
-.content h1 {
-    letter-spacing: 1px;
-}
-
-.form{
-    width: 100%;
     display: flex;
-    
-    align-items: center;
     flex-direction: column;
-
-}
-
-
-.top-form,
-.middle-form,
-.bottom-form{
-    
-    min-height: 65px;
-    margin: 20px;
-}
-
-
-.form input [type="text"],
-.form textarea{
-    padding: 15px 5px;
-    box-sizing: border-box;
     width: 100%;
-    border: 2px solid rgb(177, 36, 36)
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(46, 134, 248);
+    padding: 44px;
 }
+
+.name{
+    display: flex;
+    flex-direction: column;
+}
+.e-mail{
+    display: flex;
+    flex-direction: column;
+}
+.subject{
+    display: flex;
+    flex-direction: column;
+}
+.message{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*About me*/
 .picture-and-text{

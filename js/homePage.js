@@ -32,16 +32,16 @@ window.addEventListener("resize", () => {
   renderCarousel(posts);
 });
 
-if (window.innerWidth < 1100) {
+if (window.innerWidth < 800) {
   numberOfCarousellItems = 0;
 } 
-// else if (window.innerWidth < 1100) {
-//   numberOfCarousellItems = 3;
-// }
+else if (window.innerWidth < 1100) {
+  numberOfCarousellItems = 2;
+}
 
-// else if (window.innerWidth < 700) {
-//   numberOfCarousellItems = 2;
-// }
+else if (window.innerWidth < 700) {
+  numberOfCarousellItems = 2;
+}
 
 
 /*skriver dom element for karusellen */
