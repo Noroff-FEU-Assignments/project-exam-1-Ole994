@@ -1,5 +1,6 @@
 const queryString = window.location.search;
 const id = new URLSearchParams(queryString).get('id');
+const spinner = document.querySelector(".lds-spinner");
 // if (!id) { window.location = "posts.html"; }
 console.log(id)
 
@@ -11,7 +12,8 @@ fetch(url, {
   "method": "GET"
 })
   .then(response => response.json())
-  .then(data => template (data) );
+  .then(data => template (data) )
+  .finally(()=> spinner.classList.remove("lds-spinner"));
 
 const template = (posts) => {
   for (post of posts) {
@@ -21,8 +23,8 @@ const template = (posts) => {
           
           
           
-            <div class"image-cards-homepage>"<h2>${post.title.rendered}</h2>
-            <a class="navbar-links" href="posts.html?id=${post.id}"><img class= "img-card-single-post"src = "${imageUrl}"/></a>
+            <div class"image-card-postsPage>"<h2>${post.title.rendered}</h2>
+            <a class="navbar-links" href="posts.html?id=${post.id}"><img class= "img-cards-single-post"src = "${imageUrl}"/></a>
             ${post.excerpt.rendered}</div>
             `
     postContent.innerHTML += htmlString;
