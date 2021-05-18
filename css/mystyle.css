@@ -389,7 +389,7 @@ ul{
 
 
 
-@media(max-width: 800px) {
+@media(max-width: 766px) {
 
     header {
         max-width: 100%;
@@ -424,7 +424,9 @@ ul{
     width: 80%;
     margin: auto;
 }
- 
+}
+
+@media(max-width: 800px){
 
 }
 
