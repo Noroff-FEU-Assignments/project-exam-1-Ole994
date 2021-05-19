@@ -1,6 +1,9 @@
 const queryString = window.location.search;
 const id = new URLSearchParams(queryString).get('id');
 const spinner = document.querySelector(".lds-spinner");
+const viewMoreButton = document.querySelector (".single-button-view-more");
+let postOffset = 8; 
+
 // if (!id) { window.location = "posts.html"; }
 console.log(id)
 
@@ -14,7 +17,7 @@ fetch(url, {
 })
   .then(response => response.json())
   .then(data => template (data) )
-  .finally(()=> spinner.classList.remove("lds-spinner"));
+  // .finally(()=> spinner.classList.remove("lds-spinner"));
 
 const template = (posts) => {
   for (post of posts) {
@@ -31,6 +34,33 @@ const template = (posts) => {
     postContent.innerHTML += htmlString;
   }
 }
+//Først lage en variabel, i dette tilfelle øverst på siden
+//Denne variabelen innholder antall poster som er hentet så langt
+//Deretter lager vi en addEventListner funksjon son reagerer når knappen blir trykket på.
+//En ser at i dette tilfelle postOffset under er satt til 4
+//som vil si at den legger til 4 poster på siden.
+//$postOffset den forteller til wordpress at den skal ignorere postene som alt er hentet
+//Så skjer et fetchCall som utfører et httpCall (restcall)
+//som får tilbake poster fra wordpress 
+//de postene blir lagt til i dommen gjennom templaten som ble laget.
+
+
+viewMoreButton.addEventListener("click", ()=>{
+  
+  const url = `https://olekorvald.no/wp-json/wp/v2/posts?_embed=wp:featuredmedia&per_page=2&offset=${postOffset}`
+  postOffset += 2
+  fetch(url, {
+    "method": "GET"
+  })
+    .then(response => response.json())
+    .then(data => template (data) )
+  
+})
+
+
+
+
+
 
      
    

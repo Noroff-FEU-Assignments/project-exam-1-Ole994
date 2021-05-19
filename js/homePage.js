@@ -30,20 +30,32 @@ fetch(url, {
 // Kan brukes sammen med resize-event.
 
 window.addEventListener("resize", () => {
+  if (screen.width < 800) {
+    numberOfCarousellItems = 0;
+  } 
+
+  else if (screen.width < 1100) {
+    numberOfCarousellItems = 2;
+  }
+  else{
+     
+      numberOfCarousellItems = 3;
+    }
+  
+ 
 //   // Endre antall kort vi viser ved å endre numberOfCarousellItems. 
   renderCarousel(posts);
 });
 
-if (window.innerWidth < 800) {
-  numberOfCarousellItems = 0;
-} 
-else if (window.innerWidth < 1100) {
-  numberOfCarousellItems = 2;
-}
+  if (screen.width < 800) {
+    numberOfCarousellItems = 0;
+  } 
+  else if (screen.width < 1100) {
+    numberOfCarousellItems = 2;
+  }
+  
 
-else if (window.innerWidth < 700) {
-  numberOfCarousellItems = 2;
-}
+
 
 
 /*skriver dom element for karusellen */
@@ -130,6 +142,5 @@ carouselButtonNext.addEventListener(`click`, () => {
   // I praksis: oppdatere karusell med riktige elementer. 
   renderCarousel(posts);
 });
-
 
 
