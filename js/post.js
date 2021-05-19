@@ -1,24 +1,30 @@
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
-        const url = `https://olekorvald.no/wp-json/wp/v2/posts/${id}?_embed`
-        const postContent = document.querySelector(".post-content-post-page")
-        fetch(url, {
-            "method": "GET"
-          })
-            .then(response => response.json())
-            .then(data => renderCarousel(data));
-          
-          const renderCarousel = (post) => {
-             
-              console.log(post)
-              let imageUrl = post._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url;
-              let htmlString = `
-              
-              
+const spinner = document.querySelector(".lds-spinner"); 
+const url = `https://olekorvald.no/wp-json/wp/v2/posts/${id}?_embed`
+const postContent = document.querySelector(".post-content-post-page")
+
+
+fetch(url, {
+  "method": "GET"
+})
+  .then(response => response.json())
+  .then(data => renderCarousel(data) )
+  .finally(()=> spinner.classList.remove("lds-spinner"));
+
+const renderCarousel = (post) => {
+
+  console.log(post)
+  let imageUrl = post._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url;
+  let htmlString = `
+      
               <div class"image-card-postsPage>"<h2>${post.title.rendered}</h2>
             <a class="navbar-links" href="post.html?id=${post.id}"><img class= "img-cards-single-post"src = "${imageUrl}"/></a>
             ${post.excerpt.rendered}</div>
+            
+            </div>
             `
-    postContent.innerHTML += htmlString;
-              console.log(post)}
+  postContent.innerHTML += htmlString;
+  console.log(post)
+}

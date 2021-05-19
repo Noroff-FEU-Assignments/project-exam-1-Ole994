@@ -118,7 +118,7 @@ p{
         height: 100vh;
     }
 
-    .bais{
+    .hamburger-links{
         margin-top: 100px;
         height: 700px;
         display: flex;
@@ -162,33 +162,36 @@ p{
 
 .header-dj-background{
     background-image: url(/pictures/Hero-picture-homepage.jpg);
-    height: 70vh;
+    height: 30vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    
-    
     padding: 0;
     display: flex;
     justify-content: space-around;
-    
+}
+.h1-front-page{
+    font-size: 16px;
+    border-bottom:  2px solid white;
 }
 
 
-.h1-frontpage{
-width: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
-height: 200px;
-
-}
 .backround-img{
     width: 100%;
     position: absolute;
     top:0;
     
 }
+
+
+
+@media (min-width: 800px){
+    .header-dj-background{
+        height: 80vh;
+        max-width:100%;
+    }
+}
+
 li{
     list-style-type: none;
 }
@@ -320,7 +323,7 @@ ul{
     z-index: 1
 }
 .image-card-homepage {
-    border: 2px solid red;
+    border: 2px solid rgb(70, 53, 165);
     border-radius: 5px;       
     /* width: 300px; */
     
@@ -532,6 +535,7 @@ ul{
     align-items: center;
     width: 100%;
     background-color: white;
+    text-align: center;
 }
 
 .textbox-1,
@@ -621,11 +625,11 @@ ul{
 }
 
 .posts-box{
-    border: 22px solid red;
+    border: 22px solid rgb(59, 43, 43);
 }
 
 .posts-content-Posts-Page > div {
-    border: 2px solid red;
+    border: 2px solid rgb(111, 70, 153);
     border-radius: 5px;       
     width: 300px; 
     box-shadow: rgba(230, 215, 215, 0.25) 0px 54px 55px, rgba(165, 154, 154, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(243, 243, 243, 0.09) 0px -3px 5px;
@@ -730,7 +734,7 @@ width: 40%;
 	color:  inherit;
 }
  
-.footer-all .footer-museum-name{
+.footer-all .p-copyRight{
 	color:  #8f9296;
 	font-size: 14px;
 	font-weight: normal;
@@ -781,7 +785,7 @@ width: 40%;
 	width: 20%;
 }
  
-.footer-all .footer-museum-about{
+.footer-all .footer-about-me-text{
 	line-height: 35px;
 	color:  #92999f;
 	font-size: 13px;
