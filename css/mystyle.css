@@ -16,6 +16,11 @@ p{
 }
 
 
+h1{
+    color: white;
+}
+
+
 
 
 /*Header/nav*/
@@ -102,9 +107,9 @@ li{
     max-width:100%;
 }
 .h1-front-page{
-    font-size: 16px;
+    font-size: 50px;
     border-bottom:  2px solid white;
-    height: 20px;
+    
 }
 
 
@@ -147,69 +152,8 @@ a{
     }
 
 
-@media (min-width: 728px){
-ul{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-    width: 50%;
-    margin: auto;
-}    
-.h1-postsPage{
-    font-size: large;
-    color: #4978a7;
-}
 
-.all-posts-container{
-    border: 7px solid #445e77;
-}
-
-.posts-content-Posts-Page{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 50px;
-    
-    justify-content: center;
-    align-items: center;
-}
-
-.posts-box{
-    border: 22px solid rgb(59, 43, 43);
-}
-
-.posts-content-Posts-Page > div {
-    border: 2px solid rgb(111, 70, 153);
-    border-radius: 5px;       
-    width: 300px; 
-    box-shadow: rgba(230, 215, 215, 0.25) 0px 54px 55px, rgba(165, 154, 154, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(243, 243, 243, 0.09) 0px -3px 5px;
-    margin: 20px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
-    height: 500px;
-}
-.view-more-button{
-    text-align: center;
-    padding: 1rem 0;
-}
-}
-    /* @media (max-width: 728px){
-
-    .logo-div{
-    display: none;
-}
-    .navbar-desktop{
-        display: none;
-}
-}
-.navbar-media-queries{
-        display: none;
-    }
-} */
-
+ 
 
 /*Homepage NOT queries*/
 
@@ -298,12 +242,19 @@ ul{
    flex-shrink: 1;
    height: 25px;
    align-self: center;
+   background-color: transparent;
+   border: none;
+   color: white;
 }
 
 .next-button{
     flex-shrink: 1;
    height: 25px;
    align-self: center;
+   align-self: center;
+   background-color: transparent;
+   border: none;
+   color: white;
     
 }
 .image-card-homepage {
@@ -325,10 +276,10 @@ ul{
     object-fit:cover;
     height: 200px; 
     background-color:#303336;
-    display: flex;
-    align-items:center;
+    /* display: flex; */
+    /* align-items:center;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: row; */
 }
 
     .view-more-button-home-page {
@@ -366,112 +317,12 @@ ul{
 .aboutMe-frontpage-div{
     display: flex;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
 } 
-}
 
 
 
-/*PostPage NOT queries*/
-.h1-postsPage{
-    font-size: large;
-    color: #4978a7;
-}
 
-.all-posts-container{
-    border: 7px solid #445e77;
-}
-
-.posts-content-Posts-Page{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 50px;
-    
-    justify-content: center;
-    align-items: center;
-}
-
-.posts-box{
-    border: 22px solid rgb(59, 43, 43);
-}
-
-.posts-content-Posts-Page > div {
-    border: 2px solid rgb(111, 70, 153);
-    border-radius: 5px;       
-    width: 300px; 
-    box-shadow: rgba(230, 215, 215, 0.25) 0px 54px 55px, rgba(165, 154, 154, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(243, 243, 243, 0.09) 0px -3px 5px;
-    margin: 20px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
-    height: 500px;
-}
-.view-more-button{
-    text-align: center;
-    padding: 1rem 0;
-}
-
-
-
-@media(max-width: 766px) {
-
-    header {
-        max-width: 100%;
-    }
-
-    .post-carousel{
-        display: flex;
-        justify-content: center;
-    }
-
-    .aboutMe-frontpage-div{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-    .aboutMe-frontpage-p{
-        margin: 0;
-    }
-    .image-card-homepage{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-.view-more-button-home-page{
-    margin: 0;
-}
-
-.p-inside-carousell-image-card> p{
-    width: 80%;
-    margin: auto;
-}
-}
-
-@media(max-width: 1400px) {
-
-    header {
-        max-width: 100%;
-        
-        
-    }
-
-    .aboutMe-frontpage-div{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-    .aboutMe-frontpage-p{
-        margin: 0;
-    }
-
-    
-}
 
 
 /*Contact-page*/
@@ -539,15 +390,111 @@ ul{
     text-align: center;
 }
 
+
+/*PostsPage NOT queries*/
+.h1-postsPage{
+    font-size: large;
+    color: #4978a7;
+}
+
+.all-posts-container{
+    border: 7px solid #445e77;
+}
+
+.posts-content-Posts-Page{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.posts-box{
+    border: 22px solid rgb(59, 43, 43);
+}
+
+.posts-content-Posts-Page > div {
+    border: 2px solid rgb(111, 70, 153);
+    border-radius: 5px;       
+    width: 300px; 
+    box-shadow: rgba(230, 215, 215, 0.25) 0px 54px 55px, rgba(165, 154, 154, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(243, 243, 243, 0.09) 0px -3px 5px;
+    margin: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 500px;
+}
+.view-more-button{
+    text-align: center;
+    padding: 1rem 0;
+}
+
+
+/*PostPage*/
+
+
+.post-content-post-page{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.post-content-post-page > div {
+    border: 2px solid rgb(111, 70, 153);
+    border-radius: 5px;       
+    width: 300px; 
+    box-shadow: rgba(230, 215, 215, 0.25) 0px 54px 55px, rgba(165, 154, 154, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(243, 243, 243, 0.09) 0px -3px 5px;
+    margin: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 800px;
+}
+
+.post-content-post-page > :first-child{
+    height: 700px;
+}
+.posts-content-Posts-Page > div {
+    height: 800px;
+}
+
+
+.img-cards-single-post{
+    height: 300px;
+}
+.post-title,
+.post-text{
+    height: 150px;
+    padding: 5px;
+}
+
+.post-text{
+height: 200px;
+
+}
+.post-image{
+    height: 300px;
+}
+
+
+
+
+
+
+
+
+
 .textbox-1,
 .textbox-2,
 .textbox-3{
     color: black;
 }
-
-
-/*mobile*/
-@media (min-width: 375px){
     .image-about-me-page{
         width: 300px;
         height: 400px;
@@ -560,82 +507,9 @@ ul{
 .text-about-me-page p{
     padding-bottom: 40px;
     margin: 40px;
-}
 
-}
-
-
-/*Desktop big*/
-
-@media (min-width: 1200px){
-.picture-and-text-about-me-page{
-         display: flex;         
-         justify-content:space-evenly;
-         box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-         margin-left: 0;
-     }
-    .image-about-me-page{
-        width: 800px;
-        height: 900px;
-        
-    }
-     .picture-div-about-me-page{
-         width: 35%;
-         margin: 0;
-         
-     }
-
-
-     .text-about-me-page{
-         width: 50%;
-     }
-
-     .more-info-about-page{
-         display: flex;
-         flex-direction: row;
-         justify-content: space-evenly;
-     }
 
 }
-
-
-
-
-
-/*Mediaqueries*/
-
-
-@media (min-width: 1110px){
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    .posts-content-Posts-Page{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        
-        text-align: center;
-        padding: 50px;
-        
-        
-    }
-}
-
 
 .footer-all{
 	background-color: #292c2f;
@@ -769,7 +643,41 @@ width: 40%;
 	margin-bottom: 5px;
 }
  
-@media (max-width: 880px) { 
+@media (max-width: 976px) { 
+
+    header {
+        max-width: 100%;
+    }
+/*Homepage*/
+    .post-carousel{
+        display: flex;
+        justify-content: center;
+    }
+
+    .aboutMe-frontpage-div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .aboutMe-frontpage-p{
+        margin: 0;
+    }
+    .image-card-homepage{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+.view-more-button-home-page{
+    margin: 0;
+}
+
+.p-inside-carousell-image-card> p{
+    width: 80%;
+    margin: auto;
+}
     .nav-menu {
     display: flex;
     position: absolute;
@@ -791,6 +699,8 @@ width: 40%;
     overflow: hidden;
     height: 100vh;
 }
+
+
 
 .hamburger-links{
     margin-top: 100px;
@@ -830,6 +740,79 @@ width: 40%;
 .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
 }
+
+/*Posts-Page*/
+.post-content-post-page > div {
+    border: 2px solid rgb(111, 70, 153);
+    border-radius: 5px;       
+    width: 300px; 
+    box-shadow: rgba(230, 215, 215, 0.25) 0px 54px 55px, rgba(165, 154, 154, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(243, 243, 243, 0.09) 0px -3px 5px;
+    margin: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 800px;
+}
+
+.post-content-post-page > :first-child{
+    height: 700px;
+}
+/* .posts-content-Posts-Page > div {
+    height: 8000px;
+    display: none;
+} */
+
+.posts-content-Posts-Page > div{
+    flex-direction: column;
+}
+
+
+.img-cards-single-post{
+    height: 300px;
+}
+.post-title,
+.post-text{
+    height: 150px;
+    padding: 5px;
+}
+
+
+
+}
+.post-image{
+    height: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
 
     /*footer*/
@@ -848,4 +831,114 @@ width: 40%;
 	}
  	.footer-all .footer-center i{
 		margin-left: 0;
-    }  
+    } 
+    .h1-postsPage{
+        font-size: large;
+        color: #4978a7;
+    }
+    
+    .all-posts-container{
+        border: 7px solid #445e77;
+    }
+    
+    .posts-content-Posts-Page{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 50px;
+        
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .posts-box{
+        border: 22px solid rgb(59, 43, 43);
+    }
+    
+    .posts-content-Posts-Page > div {
+        border: 2px solid rgb(111, 70, 153);
+        border-radius: 5px;       
+        width: 300px; 
+        box-shadow: rgba(230, 215, 215, 0.25) 0px 54px 55px, rgba(165, 154, 154, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(243, 243, 243, 0.09) 0px -3px 5px;
+        margin: 20px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: 800px;
+    }
+    .view-more-button{
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+}    
+
+
+    /*Desktop big*/
+
+@media (min-width: 1200px){
+header {
+        max-width: 100%;
+    }
+
+    .aboutMe-frontpage-div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .aboutMe-frontpage-p{
+        margin: 0;
+    }
+
+
+    .picture-and-text-about-me-page{
+             display: flex;         
+             justify-content:space-evenly;
+             box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+             margin-left: 0;
+         }
+        .image-about-me-page{
+            width: 800px;
+            height: 900px;
+            
+        }
+         .picture-div-about-me-page{
+             width: 35%;
+             margin: 0;
+             
+         }
+    
+    
+         .text-about-me-page{
+             width: 50%;
+         }
+    
+         .more-info-about-page{
+             display: flex;
+             flex-direction: row;
+             justify-content: space-evenly;
+         }
+
+         .posts-content-Posts-Page{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            
+            text-align: center;
+            padding: 50px;
+            
+            
+        }
+    
+    }

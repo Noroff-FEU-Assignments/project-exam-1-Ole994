@@ -11,7 +11,7 @@ fetch(url, {
 })
   .then(response => response.json())
   .then(data => renderCarousel(data) )
-  .finally(()=> spinner.classList.remove("lds-spinner"));
+  // .finally(()=> spinner.classList.remove("lds-spinner"));
 
 const renderCarousel = (post) => {
 
@@ -19,11 +19,13 @@ const renderCarousel = (post) => {
   let imageUrl = post._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url;
   let htmlString = `
       
-              <div class"image-card-postsPage>"<h2>${post.title.rendered}</h2>
-            <a class="navbar-links" href="post.html?id=${post.id}"><img class= "img-cards-single-post"src = "${imageUrl}"/></a>
-            ${post.excerpt.rendered}</div>
+              <div class"image-card-postsPage>
+              <div class="post-title"><h2>${post.title.rendered}</h2></div>
+              <div class="post-image"> <a class="navbar-links" href="post.html?id=${post.id}"><img class= "img-cards-single-post"src = "${imageUrl}"/></a></div>
+              <div class="post-text"> ${post.excerpt.rendered}</div>
+              </div>
             
-            </div>
+            
             `
   postContent.innerHTML += htmlString;
   console.log(post)
