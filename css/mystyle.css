@@ -20,13 +20,9 @@ p{
 
 /*Header/nav*/
 
-
 /*header and navbar*/
 .header-hamburger{
-   
     background-color:#303133;
-    
-
 }
 
 .navbar-hamburger {
@@ -54,6 +50,7 @@ p{
 
 
 /*Styles for other elements*/
+
 .nav-menu {
     top : 0;
     display: flex;
@@ -82,19 +79,12 @@ p{
     align-items: center;
     width: 80%;
     margin: auto;
-    
-    
 }
 .nav-menu{
     display: none;
 }
-
-
-
-
-
-
-
+li{
+    list-style-type: none;}
 
 /*Homepage Styles*/
 
@@ -108,6 +98,8 @@ p{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    height: 80vh;
+    max-width:100%;
 }
 .h1-front-page{
     font-size: 16px;
@@ -123,19 +115,7 @@ p{
     
 }
 
-
-
-@media (min-width: 800px){
-    .header-dj-background{
-        height: 80vh;
-        max-width:100%;
-    }
-}
-
-li{
-    list-style-type: none;
-}
-.navbar-desktop {
+/* .navbar-desktop {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -144,17 +124,17 @@ li{
 
     margin-top: 20px;   
     
-}
+} */
 
 .logo-div{
     margin-top: 20px;
 }
 
 
-.navbar-media-queries ul{
+/* .navbar-media-queries ul{
     display: flex;
     align-items: center;
-}
+} */
 
 a{
     color: white;
@@ -176,7 +156,47 @@ ul{
     width: 50%;
     margin: auto;
 }    
-    @media (max-width: 728px){
+.h1-postsPage{
+    font-size: large;
+    color: #4978a7;
+}
+
+.all-posts-container{
+    border: 7px solid #445e77;
+}
+
+.posts-content-Posts-Page{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.posts-box{
+    border: 22px solid rgb(59, 43, 43);
+}
+
+.posts-content-Posts-Page > div {
+    border: 2px solid rgb(111, 70, 153);
+    border-radius: 5px;       
+    width: 300px; 
+    box-shadow: rgba(230, 215, 215, 0.25) 0px 54px 55px, rgba(165, 154, 154, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(243, 243, 243, 0.09) 0px -3px 5px;
+    margin: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 500px;
+}
+.view-more-button{
+    text-align: center;
+    padding: 1rem 0;
+}
+}
+    /* @media (max-width: 728px){
 
     .logo-div{
     display: none;
@@ -188,22 +208,52 @@ ul{
 .navbar-media-queries{
         display: none;
     }
-}
+} */
 
 
-
-
-
-
-
-
-
-
-
-/*Homepage*/
+/*Homepage NOT queries*/
 
 .hidden {
     display: none !important;
+}
+.h1-postsPage{
+    font-size: large;
+    color: #4978a7;
+}
+
+.all-posts-container{
+    border: 7px solid #445e77;
+}
+
+.posts-content-Posts-Page{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.posts-box{
+    border: 22px solid rgb(59, 43, 43);
+}
+
+.posts-content-Posts-Page > div {
+    border: 2px solid rgb(111, 70, 153);
+    border-radius: 5px;       
+    width: 300px; 
+    box-shadow: rgba(230, 215, 215, 0.25) 0px 54px 55px, rgba(165, 154, 154, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(243, 243, 243, 0.09) 0px -3px 5px;
+    margin: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 500px;
+}
+.view-more-button{
+    text-align: center;
+    padding: 1rem 0;
 }
 
 .pictures-of-new-posts {
@@ -231,12 +281,8 @@ ul{
 .h3-for-front-page {
     color: rgb(255, 255, 255);
 }
-    /*Not finito*/
 .container-homepge{
     display: flex;
-   
-    /* margin: 80px; */
-    
 
 }
 
@@ -262,10 +308,7 @@ ul{
 }
 .image-card-homepage {
     border: 2px solid rgb(70, 53, 165);
-    border-radius: 5px;       
-
-    
-    
+    border-radius: 5px;           
     flex: 1;
     justify-content: space-between;
     align-items: center;
@@ -274,9 +317,6 @@ ul{
     
 }
 
-
-
-/*prøvd*/
 .img-card-carousel{
     padding-top: 40px;
     padding-right: 5px;
@@ -327,6 +367,50 @@ ul{
     display: flex;
     align-items: center;
     flex-direction: row;
+} 
+}
+
+
+
+/*PostPage NOT queries*/
+.h1-postsPage{
+    font-size: large;
+    color: #4978a7;
+}
+
+.all-posts-container{
+    border: 7px solid #445e77;
+}
+
+.posts-content-Posts-Page{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.posts-box{
+    border: 22px solid rgb(59, 43, 43);
+}
+
+.posts-content-Posts-Page > div {
+    border: 2px solid rgb(111, 70, 153);
+    border-radius: 5px;       
+    width: 300px; 
+    box-shadow: rgba(230, 215, 215, 0.25) 0px 54px 55px, rgba(165, 154, 154, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(243, 243, 243, 0.09) 0px -3px 5px;
+    margin: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 500px;
+}
+.view-more-button{
+    text-align: center;
+    padding: 1rem 0;
 }
 
 
@@ -367,12 +451,6 @@ ul{
     margin: auto;
 }
 }
-
-@media(max-width: 800px){
-
-}
-
-
 
 @media(max-width: 1400px) {
 
@@ -427,23 +505,6 @@ ul{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*About me*/
 .picture-and-text{
     display: flex;
@@ -455,7 +516,8 @@ ul{
     padding: 20px 0 5px 0;
 }
 
-.image-about-me-page{max-width: 100%;
+.image-about-me-page{
+    max-width: 100%;
     border-radius: 70px;
     box-shadow: rgba(140, 154, 192, 0.25) 0px 54px 55px, rgba(144, 155, 190, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(136, 111, 111, 0.09) 0px -3px 5px;
     object-fit: cover;
@@ -499,15 +561,13 @@ ul{
     padding-bottom: 40px;
     margin: 40px;
 }
-    
-
 
 }
 
 
 /*Desktop big*/
 
-@media (min-width: 1110px){
+@media (min-width: 1200px){
 .picture-and-text-about-me-page{
          display: flex;         
          justify-content:space-evenly;
@@ -540,48 +600,6 @@ ul{
 
 
 
-
-
-
-.h1-postsPage{
-    font-size: large;
-    color: #4978a7;
-}
-
-.all-posts-container{
-    border: 7px solid #445e77;
-}
-
-.posts-content-Posts-Page{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 50px;
-    
-    justify-content: center;
-    align-items: center;
-}
-
-.posts-box{
-    border: 22px solid rgb(59, 43, 43);
-}
-
-.posts-content-Posts-Page > div {
-    border: 2px solid rgb(111, 70, 153);
-    border-radius: 5px;       
-    width: 300px; 
-    box-shadow: rgba(230, 215, 215, 0.25) 0px 54px 55px, rgba(165, 154, 154, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(243, 243, 243, 0.09) 0px -3px 5px;
-    margin: 20px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
-    height: 500px;
-}
-.view-more-button{
-    text-align: center;
-    padding: 1rem 0;
-}
 
 
 /*Mediaqueries*/
@@ -813,25 +831,7 @@ width: 40%;
     transform: translateY(-8px) rotate(-45deg);
 }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     /*footer*/
 .footer-all{
 		font: bold 14px sans-serif;
@@ -849,17 +849,3 @@ width: 40%;
  	.footer-all .footer-center i{
 		margin-left: 0;
     }  
-    }
-
-
-
-      
-
-
-
-
-
-
-
-
-
