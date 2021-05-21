@@ -2,14 +2,14 @@ const queryString = window.location.search;
 const id = new URLSearchParams(queryString).get('id');
 const spinner = document.querySelector(".lds-spinner");
 const viewMoreButton = document.querySelector (".single-button-view-more");
-let postOffset = 8; 
+let postOffset = 10; 
 
 // if (!id) { window.location = "posts.html"; }
 console.log(id)
 
 
 /*henter ut data*/
-const url = "https://olekorvald.no/wp-json/wp/v2/posts?_embed=wp:featuredmedia&per_page=8"
+const url = "https://olekorvald.no/wp-json/wp/v2/posts?_embed=wp:featuredmedia&per_page=10"
 
 const postContent = document.querySelector(".posts-content-Posts-Page")
 fetch(url, {

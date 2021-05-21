@@ -4,7 +4,7 @@ const url = "https://olekorvald.no/wp-json/wp/v2/posts?_embed=wp:featuredmedia&p
 const postCarousel = document.querySelector(".post-carousel");
 const carouselButtonPrevious = document.querySelector(".prev-button");
 const carouselButtonNext = document.querySelector(".next-button");
-const spinner = document.querySelector(".lds-spinner");
+const spinner = document.querySelector(".loader");
 
 // Dette er tilstand som vi bruker. F.eks. lagrer vi alle postene i posts, og 
 // bruker disse til å endre de på nytt når vi trenger det. 
@@ -21,7 +21,7 @@ fetch(url, {
     posts = data;
     renderCarousel(data);
   })
-  .finally(()=> spinner.classList.remove("lds-spinner"));
+  .finally(()=> spinner.classList.remove("loader"));
 
 /* Sjekker with på vindu for å tilpasse antall elementer i karusellen*/
 // Vi kan bruke window.innerWidth for å sjekke hvor vid skjermen er
@@ -96,14 +96,33 @@ const renderCarousel = (posts) => {
 
     let htmlString = `
     <div class="image-card-homepage ${showCardClass}">
-      <div class="container-allH2Cards-frontPage">
-        <h2 class="h2-image-forntPage">${post.title.rendered}</h2>
-      </div>
-      <a class="navbar-links" href="post.html?id=${post.id}"><img class= "img-card-carousel"src = "${imageUrl}"/></a>
-      <div class= "p-inside-carousell-image-card">${post.excerpt.rendered}</div>
-      <a class="view-more-button-home-page" href="post.html">Read more</a>
-    </div>`;
+        <div class="container-allH2Cards-frontPage">
+          <h2 class="h2-image-forntPage">${post.title.rendered}</h2>
+        </div>
 
+          <a class="navbar-links" href="post.html?id=${post.id}">
+            <img class= "img-card-carousel"src = "${imageUrl}"/>
+          </a>
+
+          <div class= "p-inside-carousell-image-card">${post.excerpt.rendered}</div>
+              <div class="box-3">
+            
+                <div class="btn btn-three">
+                      
+         <a href="posts.html"> Read more    </div>
+            </div>
+        
+          
+</a>  
+    </div>
+    
+    `
+
+          
+
+
+
+    
     postCarousel.innerHTML += htmlString;
   }
 }
