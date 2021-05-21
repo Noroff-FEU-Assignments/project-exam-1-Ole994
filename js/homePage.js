@@ -69,7 +69,7 @@ const renderCarousel = (posts) => {
 
   /*entries får index og verdi*/
 
-  // index = teller opp indeks til postene vi iterer igjennom
+  // index = teller opp indeks til postene som iterer igjennom
   // F.eks. 10 poster -> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
   // post = faktisk post fra Wordpress
@@ -82,7 +82,7 @@ const renderCarousel = (posts) => {
     // Dette definerer hvilket intervall vi ønsker å vise aktive poster i karusellen.
 
 
-    // Hvis du er innenfor intervallet start-index og start-index + antall kort som skal vises:
+    // Hvis man er innenfor intervallet start-index og start-index + antall kort som skal vises:
     // så vis kort (ved å ikke legge på hidden-klasse), ellers legg på "hidden"-klasse. 
 
     const showCard = index >= activeCarouselStart && index <= (activeCarouselStart + numberOfCarousellItems);
