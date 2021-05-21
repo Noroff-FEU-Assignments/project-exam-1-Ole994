@@ -642,6 +642,7 @@ a {
     z-index: 999;
     display: block;
     cursor: pointer;
+    margin-right: 50px;
   }
 
   .hamburger.active .bar:nth-child(2) {
