@@ -100,15 +100,15 @@ h4 {
 /*Styles for other elements*/
 
 .nav-menu {
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20vh;
  
 
 
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  align-items: center;
-  width: 50%;
-  margin: auto;
+ 
 }
 
 .nav-item {
@@ -727,7 +727,7 @@ input[type=submit]:hover {
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     margin: 0;
     padding: 0;
-    height: 100%;
+    height: 100%
   }
 
   .body-on-click {
@@ -736,7 +736,7 @@ input[type=submit]:hover {
   }
 
   .hamburger-links {
-    margin-top: px;
+    margin-top: 20px;
     height: 700px;
     display: flex;
     /* justify-content: space-between; */
@@ -869,11 +869,12 @@ input[type=submit]:hover {
 }
 
 ul {
-  top: 0;
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   align-items: center;
-  height: 20vh;
+  width: 50%;
+  margin: auto;
 }
 
 /*Desktop big*/
@@ -939,6 +940,13 @@ ul {
     padding: 50px;
   }
 }
+
+
+
+
+
+
+
 .footer-all{
 	background-color: #292c2f;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
@@ -960,13 +968,13 @@ vertical-align: top;
 width: 40%;
 }
  
-.footer-all h3{
+.footer-all .h3-left-footer{
 	color:  #ffffff;
 	font: normal 36px 'Cookie', cursive;
 	margin: 0;
 }
  
-.footer-all h3 span{
+.footer-all .h3-left-footer span{
 	color:  lightblue;
 }
   
@@ -983,12 +991,7 @@ width: 40%;
 	color:  inherit;
 }
  
-.footer-all .footer-museum-name{
-	color:  #8f9296;
-	font-size: 14px;
-	font-weight: normal;
-	margin: 0;
-}
+
 .footer-all .footer-center{
 	width: 35%;
 }
@@ -1034,7 +1037,7 @@ width: 40%;
 	width: 20%;
 }
  
-.footer-all .footer-museum-about{
+.footer-all .footer-copy-right-name{
 	line-height: 35px;
 	color:  #92999f;
 	font-size: 13px;
