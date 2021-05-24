@@ -524,6 +524,12 @@ input[type=submit]:hover {
  
 
 /*About me*/
+
+.p-about-me-page{
+  font-size: 20px;
+}
+
+
 .picture-and-text {
   display: flex;
   flex-direction: column;
