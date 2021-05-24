@@ -54,9 +54,9 @@
         </nav>
   </header>
   
-  <ul class="nav-menu">
+  <ul class="hamburger-links">
   
-  <div class="hamburger-links">
+  <div class="nav-menu">
     
         <li class="nav-item">
             <a href="index.html" class="nav-link">Home</a>
@@ -71,48 +71,172 @@
             <a href="posts.html" class="nav-link">Posts</a>
         </li>
   </div>
-     
   </ul>
 
 
 
+  <div class="container">
+	<h3>Contact Form</h3>
+	<form action="#" name="contact_form">
+		<label for="first_name">First Name</label>
+		<input name="first_name" type="text" required placeholder="John"/>
+		<br>
+		<label for="last_name">Last Name</label>
+		<input name="last_name" type="text" required placeholder="Doe"/>
+		<br>
+		<label for="email">Email</label>
+		<input name="email" type="email" required placeholder="you@domain.com"/>
+		<br>
+		<label for="message">Message</label><br>
+		<textarea name="message" cols="30" rows="10" placeholder="Enter your message here ..." required> </textarea>
+		<div class="center">
+			<input type="submit" value="Submit">
+		</div>
+	</form>	
+</div>
 
 
-  <form class="contact-form" action="/" method="post">
+
+
+
+<!-- Josefin sans google fonts-->
+  <!-- <div class="wrapper">
+      <h2>Contact us</h2>
+      <div id="error_message">¨hey</div>
+
+      <form id="myForm" onsubmit="return validation ()">
+          <div class="input_field">
+              <input class="yourName" type="text" placeholder="Name" id="name">
+          </div>
+
+          <div class="input_field">
+            <input class="subject" type="text" placeholder="Subject" id="subject">
+        </div>
+
+        <div class="input_field">
+            <input class="phone" type="text" placeholder="phone" id="phone">
+        </div>
+
+        <div class="input_field">
+            <input class="email" type="text" placeholder="Subject" id="email">
+        </div>
+
+        <div class="input_field"> 
+            <textarea class="" id="message" placeholder="Message"></textarea>
+        </div>
+<div class="btn">
+    <input type="submit">
+</div>
+
+
+
+
+
+      </form>
+  </div> -->
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <form class="contact-form" action="/" method="post">
         <h3>Get in touch</h3>
         <h4>Fill in the form below, and we'll get back to you within 24 hours.</h4>
 
-        <div class="contact-wrap">
-                <div class="name-div">
-                        <label>
-                                <span class="name">Name: (required)</span>
-                                <input placeholder="Please enter your name" type="text" tabindex="1" required autofocus>
-                        </label>
-                </div> 
-                <div class="e-mail-div">
-                         <label>
-                                <span class="e-mail">Email: (Must be a valid one)</span>
-                                <input placeholder="Please enter your email" type="email" tabindex="2" required>
-                        </label>
-                </div>
-                <div class="subject-div">
-                        <label>
-                                <span class="subject">subject: (required)</span>
-                                <input placeholder="Please enter the subject" type="sub" tabindex="3" required>
-                        </label>
-                </div>
-            
-                <div class="message-div">
-                        <label>
-                                <span class="message">Message: (max 20 characters)</span>
-                                <textarea placeholder="Include all the details you can" tabindex="5" required></textarea>
-                        </label>
-                </div>
-                <div>
-                        <button name="submit" type="submit" id="contact-submit">Send Email</button>
-                </div>
-            </div>
-    </form>
+       
 
 
 
