@@ -4,6 +4,7 @@ const id = params.get("id");
 const spinner = document.querySelector(".lds-spinner"); 
 const url = `https://olekorvald.no/wp-json/wp/v2/posts/${id}?_embed`
 const postContent = document.querySelector(".post-content-post-page")
+const loading = document.querySelector(".loading");
 
 
 fetch(url, {
@@ -11,7 +12,7 @@ fetch(url, {
 })
   .then(response => response.json())
   .then(data => renderCarousel(data) )
-  // .finally(()=> spinner.classList.remove("lds-spinner"));
+  .finally(()=> loading.style.display = "none");
 
 const renderCarousel = (post) => {
 

@@ -3,6 +3,7 @@ const id = new URLSearchParams(queryString).get('id');
 const spinner = document.querySelector(".lds-spinner");
 const viewMoreButton = document.querySelector (".single-button-view-more");
 let postOffset = 10; 
+const loading = document.querySelector(".loading");
 
 // if (!id) { window.location = "posts.html"; }
 console.log(id)
@@ -17,7 +18,7 @@ fetch(url, {
 })
   .then(response => response.json())
   .then(data => template (data) )
-  // .finally(()=> spinner.classList.remove("lds-spinner"));
+  .finally(()=> loading.style.display = "none");
 
 const template = (posts) => {
   for (post of posts) {

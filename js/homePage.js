@@ -4,7 +4,7 @@ const url = "https://olekorvald.no/wp-json/wp/v2/posts?_embed=wp:featuredmedia&p
 const postCarousel = document.querySelector(".post-carousel");
 const carouselButtonPrevious = document.querySelector(".prev-button");
 const carouselButtonNext = document.querySelector(".next-button");
-const spinner = document.querySelector(".loader");
+const loading = document.querySelector(".loading");
 
 // Dette er tilstand som vi bruker. F.eks. lagrer vi alle postene i posts, og 
 // bruker disse til å endre de på nytt når vi trenger det. 
@@ -21,7 +21,7 @@ fetch(url, {
     posts = data;
     renderCarousel(data);
   })
-  .finally(()=> spinner.classList.remove("loader"));
+  .finally(()=> loading.style.display = "none");
 
 /* Sjekker with på vindu for å tilpasse antall elementer i karusellen*/
 // Vi kan bruke window.innerWidth for å sjekke hvor vid skjermen er
