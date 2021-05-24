@@ -1,64 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Css/mystyle.css">
-    
+
     <!-- Hotjar Tracking Code for https://condescending-nightingale-afe934.netlify.app/index.html -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:2287256,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 2287256, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
     <title>contactPage</title>
-    
+
 </head>
-<body>
 
+<header class="header-hamburger">
 
-    <header class="header-hamburger">
+    <nav class="navbar">
+        <a href="index.html" class="nav-link"><img src="/pictures/logo.png" alt="logo" class="logo-picture"></a>
+        <ul class="display-none">
 
-        <nav class="navbar">
-            <a href="index.html" class="nav-link"><img src="/pictures/logo.png" alt="logo" class="logo-picture"></a>
-            <ul class="display-none">
-
-
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="aboutPage.html" class="nav-link">About me</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contactPage.html" class="nav-link">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a href="posts.html" class="nav-link">Posts</a>
-                </li>
-
-            </ul>
-
-
-
-
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </nav>
-    </header>
-
-    <ul class="nav-menu">
-
-        <div class="hamburger-links">
 
             <li class="nav-item">
                 <a href="index.html" class="nav-link">Home</a>
@@ -72,80 +41,114 @@
             <li class="nav-item">
                 <a href="posts.html" class="nav-link">Posts</a>
             </li>
-        </div>
 
+        </ul>
+
+
+
+
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+</header>
+
+<div class="nav-menu">
+
+    <ul class="hamburger-links">
+
+        <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+            <a href="aboutPage.html" class="nav-link">About me</a>
+        </li>
+        <li class="nav-item">
+            <a href="contactPage.html" class="nav-link">Contact</a>
+        </li>
+        <li class="nav-item">
+            <a href="posts.html" class="nav-link">Posts</a>
+        </li>
     </ul>
 
-
-  <div class="container">
-	<h3>Contact Form</h3>
-	<form action="#" name="contact_form">
-		<label for="first_name">First Name</label>
-		<input name="first_name" type="text" required placeholder="Sansa"/>
-		<br>
-		<label for="last_name">Last Name</label>
-		<input name="last_name" type="text" required placeholder="Stark"/>
-		<br>
-		<label for="email">Email</label>
-		<input name="email" type="email" required placeholder="rob.stark@got.com"/>
-		<br>
-		<label for="message">Message</label><br>
-		<textarea name="message" cols="30" rows="10" placeholder="Enter your message here ..." required> </textarea>
-		<div class="center">
-			<input type="submit" value="Submit">
-		</div>
-	</form>	
 </div>
 
 
 
+    <div class="container">
+        <h3>Contact Form</h3>
+        <form action="#" name="contact_form">
+            <label for="first_name"> First Name</label>
+            <input class name="your_name" id="your_name" type="text" required placeholder="Sansa" />
+            <br>
+            <label for="email">Email</label>
+            <input name="email" id="email" type="email" required placeholder="rob.stark@got.com" />
+            <br>
+            <label for="email">subject</label>
+            <input name="subject" id="subject" type="subject" required placeholder="rob.stark@got.com" />
+            <br>
+
+
+            <label for="message">Message</label>
+            <br>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your message here ..." required> </textarea>
+            <div class="center">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
 
 
 
 
-<!---------------------------------Footer--------------------------------->
-<footer class="footer-all">
+
+
+
     
-    <div class="footer-left">
-        <h3>Dj Ok<span> - Aka Ole Korvald</span></h3>
-        <p class="footer-links">
-        <a href="index.html">Home</a>
-        ·<a href="aboutPage.html">About me</a>
-        ·<a href="contactPage.html">Contact</a>
-        ·<a href="posts.html">posts</a>
-        </p>
-        <p class="p-copyRight">Ole Korvald &copy; 2021</p>
-    </div>
+    <footer class="footer-all">
 
-    <div class="footer-center">
-        <div>
-        <i class="fa fa-map-marker"></i>
-        <p><span>Våkleivåsen 44</span> Bergen, Norway</p>
+        <div class="footer-left">
+            <h3>Dj Ok<span> - Aka Ole Korvald</span></h3>
+            <p class="footer-links">
+                <a href="index.html">Home</a>
+                ·<a href="aboutPage.html">About me</a>
+                ·<a href="contactPage.html">Contact</a>
+                ·<a href="posts.html">posts</a>
+            </p>
+            <p class="p-copyRight">Ole Korvald &copy; 2021</p>
         </div>
-        <div>
-        <i class="fa fa-phone"></i>
-        <p>+47 909 66 971</p>
-        </div>
-        <div>
-        <i class="fa fa-envelope"></i>
-        <p><a href="ole@korvald.no">ole@korvald.no</a></p>
-        </div>
-    </div>
 
-    <div class="footer-right">
-        <p class="footer-about-me-text">
-       On this blog you will find a lot of information about djing and how to become one.
-        </p>
-        <div class="footer-icons">
-        <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
-        <a href="https://www.instagram.com/"><i class="fa fa-twitter"></i></a>
-        <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-        <a href="https://github.com/"><i class="fa fa-github"></i></a>
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Våkleivåsen 44</span> Bergen, Norway</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+47 909 66 971</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="ole@korvald.no">ole@korvald.no</a></p>
+            </div>
         </div>
-    </div>
-</footer>
-        <script src="js/contactPage.js"></script>
-        <script src="js/hamburger.js"></script>
+
+        <div class="footer-right">
+            <p class="footer-about-me-text">
+                On this blog you will find a lot of information about djing and how to become one.
+            </p>
+            <div class="footer-icons">
+                <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/"><i class="fa fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/contactPage.js"></script>
+    <script src="js/hamburger.js"></script>
 </body>
-</html>
 
+</html>
