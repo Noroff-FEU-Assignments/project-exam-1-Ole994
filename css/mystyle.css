@@ -369,14 +369,7 @@ a {
 
 /*Contact-page*/
 .wrapper{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* transform: translate(-50%, -50%); */
-  background-color: rgb(79, 98, 110);
-  padding: 25px;
-  border-radius: 554px;
-  /* box-shadow: 4px 4px 2px white; */
+
 }
 
 
@@ -388,8 +381,7 @@ a {
 	outline: 0;
 }
 
-body {
-	background: #263238;  /* Set background color to #263238*/
+
 }
 
 h3 {
