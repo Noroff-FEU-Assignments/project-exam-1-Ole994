@@ -258,6 +258,10 @@ a {
 .achievements-as-dj {
   size: 100%;
   border-top: 2px solid white;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 0 5rem;
 }
 
 .key-figures-of-my-work {
@@ -340,12 +344,7 @@ a {
   margin-left: 70px;
 }
 
-.achievements-as-dj {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-  padding: 0 5rem;
-}
+
 
 .key-figures-of-my-work {
   text-align: center;
@@ -624,6 +623,11 @@ input[type=submit]:hover {
   }
 
   /*Homepage*/
+.container-homepge{
+border-bottom: 20px solid white;
+
+
+}
   .post-carousel {
     display: flex;
     justify-content: center;
@@ -645,6 +649,7 @@ input[type=submit]:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 80%;
   }
 
   .view-more-button-home-page {
@@ -654,6 +659,12 @@ input[type=submit]:hover {
   .p-inside-carousell-image-card > p {
     width: 80%;
     margin: auto;
+  }
+
+  .achievements-as-dj{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
   }
 
   .nav-menu {
@@ -908,8 +919,12 @@ width: 40%;
 	margin: 0;
 }
  
-.footer-all .h3-left-footer span{
+.footer-all .h3-left-footer {
 	color:  lightblue;
+}
+
+.h3-text-div{
+  display: flex;
 }
   
 .footer-all .footer-links{
@@ -1016,15 +1031,27 @@ justify-content: space-between;
 flex-direction: row;
 }
 
-
-
-
-
-
     
     .footer-all{
 		font: bold 14px sans-serif;
-	
+	text-align: center;
+    }
+
+    .h3-text-div{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      
+    }
+
+    .h3-left-footer{
+      text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
     }
     
 	.footer-all .footer-left,
@@ -1038,9 +1065,4 @@ flex-direction: row;
  	.footer-all .footer-center i{
 		margin-left: 0;
     }  
-    }
-
-
-
-
-
+}
