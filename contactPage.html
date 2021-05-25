@@ -77,82 +77,103 @@
 </div>
 
 
+<form id="signup">
+    <p id="message"></p>
 
-    <div class="container">
-        <h3>Contact Form</h3>
-        <form action="#" name="contact_form">
-            <label for="first_name"> First Name</label>
-            <input class name="your_name" id="your_name" type="text" required placeholder="Sansa" />
-            <br>
-            <label for="email">Email</label>
-            <input name="email" id="email" type="email" required placeholder="rob.stark@got.com" />
-            <br>
+    <fieldset>
+        <legend>
+            <h2>Contact <menu></menu>
+            </h2>
+        </legend>
+        <div>
+            <label for="name">Name</label>
+
+            <input type="text" id="name" name="name">
+            <span id="nameMsg"></span>
+            <p id="name-error"></p>
+        </div>
+
+
+        <div>
+            <label for="email">email</label>
+
+            <input type="text" id="email" name="email">
+            <span id="emailMsg"></span>
+            <p id="email-error"></p>
+        </div>
+
+        <div>
             <label for="email">subject</label>
-            <input name="subject" id="subject" type="subject" required placeholder="rob.stark@got.com" />
-            <br>
+
+            <input type="text" id="subject" name="subject">
+            <span id="subjectMsg"></span>
+            <p id="subject-error"></p>
+        </div>
+
+        <div>
+            <label for="error"> Textarea</label>
+            <textarea name="" id="message" cols="30" rows="10" placeholder="Enter your message"></textarea>
+            <p id="message-error"></p>
+        </div>
+
+        <div>
+            <input type="submit" value="submit">
+        </div>
+
+    </fieldset>
+
+</form>
 
 
-            <label for="message">Message</label>
-            <br>
-            <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter your message here ..." required> </textarea>
-            <div class="center">
-                <input type="submit" value="Submit">
-            </div>
-        </form>
-    </div>
 
 
 
 
+<footer class="footer-all">
 
-
-
-    
-    <footer class="footer-all">
-    
-        <div class="footer-left">
-            <div class="h3-text-div">
-                <h3 class="h3-left-footer">Dj<span> ok</span></h3>
-            </div>
-            <p class="footer-links">
+    <div class="footer-left">
+        <div class="h3-text-div">
+            <h3 class="h3-left-footer">Dj<span> ok</span></h3>
+        </div>
+        <p class="footer-links">
             <a href="index.html">Home</a>
             ·<a href="aboutPage.html">About me</a>
             ·<a href="contactPage.html">contact</a>
             ·<a href="posts.html">posts</a>
-            
-            </p>
-            <p class="footer-copy-name">OLE KORVALD &copy; 2020</p>
-        </div>
 
-        <div class="footer-center">
-            <div>
+        </p>
+        <p class="footer-copy-name">OLE KORVALD &copy; 2020</p>
+    </div>
+
+    <div class="footer-center">
+        <div>
             <i class="fa fa-map-marker"></i>
             <p><span>Solarvegen 56</span> Bergen, Norway</p>
-            </div>
-            <div>
+        </div>
+        <div>
             <i class="fa fa-phone"></i>
             <p>+47 248 61 539</p>
-            </div>
-            <div>
+        </div>
+        <div>
             <i class="fa fa-envelope"></i>
             <p><a href="mailto:ole.korvald1994@gmail.com">ole.korvald1994@gmail.com</a></p>
-            </div>
         </div>
+    </div>
 
-        <div class="footer-right">
-            <p class="footer-p-text">
+    <div class="footer-right">
+        <p class="footer-p-text">
             This is my, blog where you will find interesting facts about djing
-            </p>
-            <div class="footer-icons">
+        </p>
+        <div class="footer-icons">
             <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
             <a href="https://www.instagram.com/"><i class="fa fa-twitter"></i></a>
             <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
             <a href="https://github.com/"><i class="fa fa-github"></i></a>
-            </div>
         </div>
-    </footer>
-    <script src="js/contactPage.js"></script>
-    <script src="js/hamburger.js"></script>
+    </div>
+</footer>
+<script src="js/contactPage.js"></script>
+<script src="js/hamburger.js"></script>
 </body>
 
 </html>
