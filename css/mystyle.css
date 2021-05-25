@@ -285,21 +285,24 @@ a {
 
 .prev-button {
   flex-shrink: 1;
-  
   align-self: center;
   background-color: transparent;
   border: none;
   color: white;
+  position: absolute;
+  
+
 }
 
 .next-button {
   flex-shrink: 1;
-  height: 25px;
   align-self: center;
   align-self: center;
   background-color: transparent;
   border: none;
   color: white;
+   position: absolute;
+   right: 0;
 }
 
 .image-card-homepage {
@@ -624,7 +627,7 @@ input[type=submit]:hover {
 
   /*Homepage*/
 .container-homepge{
-border-bottom: 20px solid white;
+border-bottom: 2px solid white;
 
 
 }
