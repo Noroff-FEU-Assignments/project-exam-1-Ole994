@@ -285,7 +285,7 @@ a {
 
 .prev-button {
   flex-shrink: 1;
-  height: 25px;
+  
   align-self: center;
   background-color: transparent;
   border: none;
