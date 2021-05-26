@@ -23,7 +23,7 @@ fetch(url, {
 const template = (posts) => {
   for (post of posts) {
     console.log(post.title)
-    let imageUrl = post._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url;
+    let imageUrl = post._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
     let htmlString = `
     <div class"image-card-postsPage>
     <div class="post-title"><h2>${post.title.rendered}</h2></div>

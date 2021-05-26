@@ -5,37 +5,52 @@ const spinner = document.querySelector(".lds-spinner");
 const url = `https://olekorvald.no/wp-json/wp/v2/posts/${id}?_embed`
 const postContent = document.querySelector(".post-content-post-page")
 const loading = document.querySelector(".loading");
+const modalDiv = document.querySelector(".image-modal-div");
+const closeButton = document.querySelector(".close-button-modal");
 
+closeButton.addEventListener("click", () => {
+  modalDiv.style.display = "none";
+})
 
 fetch(url, {
   "method": "GET"
 })
   .then(response => response.json())
-  .then(data => renderCarousel(data))
+  .then(data => renderPost(data))
   .finally(() => loading.style.display = "none");
 
-const renderCarousel = (post) => {
+const renderPost = (post) => {
 
   console.log(post)
-  let imageUrl = post._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url;
+  let imageUrl = post._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url;
   let htmlString = `
       
               <div class"image-card-postPage">
                   <div class="post-title"><h2>${post.title.rendered}</h2></div>
               
                 <div class="post-image">
-                  <a class="navbar-links" href="post.html?id=${post.id}">
-                  
+                            
                   <img class= "img-cards-single-post-post-page"src = "${imageUrl}"/>
-                  </a>
+                  
                 </div>
                 <div class="post-text-post-page"> 
                   ${post.excerpt.rendered}
                 </div>
-              </div>
-            
-            
+              </div>            
             `
   postContent.innerHTML += htmlString;
-  console.log(post)
+  const postImage = document.querySelector(".img-cards-single-post-post-page")
+  console.log(postImage)
+
+  const modalImg = document.querySelector(".modal-img")
+
+  postImage.addEventListener("click", () => {
+    modalDiv.style.display = "block";
+
+    let largeImageUrl = post._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url;
+    modalImg.setAttribute("src", largeImageUrl)
+  })
+
+
+
 }
