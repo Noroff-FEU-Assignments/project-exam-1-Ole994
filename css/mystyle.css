@@ -369,17 +369,7 @@ a {
 
 /*Contact-page*/
 
-
-
-
-
-
 /* Remove outline of all elements on focus */
-*:focus {
-	outline: 0;
-}
-
-
 
 
 h3 {
@@ -515,19 +505,13 @@ h3 {
 }
 
 
-.img-cards-single-post-post-page{
-
-  height: 600px;
-}
 
 .img-cards-single-post {
   height: 300px;
 }
 
 
-.post-content-post-page > :first-child {
-  height: 700px;
-}
+
 
 .posts-content-Posts-Page > div {
   height: 800px;
@@ -546,9 +530,15 @@ h3 {
 }
 
 .post-image {
-  height: 300px;
+
   display: flex;
   justify-content: center;
+}
+
+.img-cards-single-post-post-page{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 1px, rgb(97, 102, 116) 0px 0px 0px 1px;
+ border-radius: 10%;
+ width: 100%; 
 }
 
 .textbox-1,
@@ -711,17 +701,13 @@ border-bottom: 2px solid white;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    border: 22px solid red;
     
   }
 
 
  
 
-  .img-cards-single-post-post-page{
-
-    height: 250px;
-    
-  }
 
 
   .post-content-post-page {
@@ -741,6 +727,9 @@ border-bottom: 2px solid white;
   .img-cards-single-post {
     height: 300px;
   }
+
+  
+  
 
   .post-title,
   .post-text {
