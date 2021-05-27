@@ -27,7 +27,8 @@ const template = (posts) => {
     let htmlString = `
     <div class"image-card-postsPage>
     <div class="post-title"><h2>${post.title.rendered}</h2></div>
-    <div class="post-image"> <a class="navbar-links" href="post.html?id=${post.id}"><img class= "img-cards-single-post"src = "${imageUrl}"/></a></div>
+    <div class="post-image"> <a class="navbar-links" href="post.html?id=${post.id}"><img class= "img-cards-single-post"src = "${imageUrl}"/></a>
+    </div>
      ${post.excerpt.rendered}
     </div>
             `

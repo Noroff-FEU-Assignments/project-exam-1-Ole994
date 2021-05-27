@@ -26,6 +26,7 @@ h4 {
 
 .btn {
   line-height: 50px;
+  
   height: 50px;
   text-align: center;
   width: 250px;
@@ -78,6 +79,8 @@ h4 {
 /*header and navbar*/
 .header-hamburger {
   background-color: #303133;
+  
+  
 }
 
 .navbar-hamburger {
@@ -146,6 +149,12 @@ li {
 }
 
 /*Homepage Styles*/
+
+.p-inside-carousell-image-card{
+  text-align: left;
+  font-size: 20px;
+  padding: 30px;
+}
 
 .header-dj-background {
   background-image: url(/pictures/Hero-picture-homepage.jpg);
@@ -412,7 +421,7 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+ 
   width: 100%;
   background-color: rgb(67, 67, 73);
   text-align: center;
@@ -504,15 +513,13 @@ h3 {
 }
 
 
-.post-text-post-page{
 
-  margin-top: 300px;
-}
 
 
 
 .img-cards-single-post {
   width: 100%;
+  
 }
 
 
@@ -543,8 +550,16 @@ h3 {
 .img-cards-single-post-post-page{
   
  border-radius: 10%;
- width: 100%;
+ width: 50%;
 }
+
+.post-text-post-page{
+  margin-top: 250px;
+  margin-bottom: 250px;
+
+}
+
+
 
 
 .image-modal-div{
@@ -572,17 +587,9 @@ z-index: 999;
 /* .close-button-modal{
 } */
 
-.textbox-1,
-.textbox-2,
-.textbox-3 {
-  color: rgb(255, 255, 255);
-}
 
-.textbox-1 h2,
-.textbox-2 h2,
-.textbox-3 h2 {
-  color: rgb(255, 255, 255);
-}
+
+
 
 .image-about-me-page {
   width: 300px;
@@ -673,11 +680,9 @@ border-bottom: 2px solid white;
 
   .hamburger-links {
     margin-top: 20px;
-    margin-left: -20px ;
-    
     height: 700px;
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-between; */
     flex-direction: column;
     
     align-items: center;
@@ -736,34 +741,25 @@ border-bottom: 2px solid white;
     align-items: center;
     flex-wrap: wrap;
     border: 22px solid red;
-    
   }
-
-
- 
-
 
 
   .post-content-post-page {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
-    
+     
   }
   
+.post-text-post-page{
 
+  
+
+}
   .post-content-post-page > :first-child {
     height: 700px;
   }
-
-  
-
-
-  
-
-  
-  
+ 
 
   .post-title,
   .post-text {
@@ -836,7 +832,7 @@ ul {
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
-  width: 90%;
+  width: 80%;
   margin: auto;
 }
 
@@ -890,9 +886,7 @@ ul {
     justify-content: space-evenly;
   }
 
-  .h2-flex {
-    display: flex;
-  }
+  
 
   .posts-content-Posts-Page {
     display: flex;
@@ -1040,7 +1034,7 @@ width: 40%;
 
 .navbar{
 display: flex;
-justify-content: space-evenly;
+justify-content: space-between;
 flex-direction: row;
 }
 

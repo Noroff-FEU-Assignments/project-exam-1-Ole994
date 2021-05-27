@@ -14,14 +14,14 @@ let activeCarouselStart = 0;
 let numberOfCarousellItems = 3;
 
 fetch(url, {
-    "method": "GET"
-  })
+  "method": "GET"
+})
   .then(response => response.json())
   .then(data => {
     posts = data;
     renderCarousel(data);
   })
-  .finally(()=> loading.style.display = "none");
+  .finally(() => loading.style.display = "none");
 
 /* Sjekker with på vindu for å tilpasse antall elementer i karusellen*/
 // Vi kan bruke window.innerWidth for å sjekke hvor vid skjermen er
@@ -32,28 +32,28 @@ fetch(url, {
 window.addEventListener("resize", () => {
   if (screen.width < 800) {
     numberOfCarousellItems = 0;
-  } 
+  }
 
   else if (screen.width < 1100) {
     numberOfCarousellItems = 2;
   }
-  else{
-     
-      numberOfCarousellItems = 3;
-    }
-  
- 
-//   // Endre antall kort vi viser ved å endre numberOfCarousellItems. 
+  else {
+
+    numberOfCarousellItems = 3;
+  }
+
+
+  //   // Endre antall kort vi viser ved å endre numberOfCarousellItems. 
   renderCarousel(posts);
 });
 
-  if (screen.width < 800) {
-    numberOfCarousellItems = 0;
-  } 
-  else if (screen.width < 1100) {
-    numberOfCarousellItems = 2;
-  }
-  
+if (screen.width < 800) {
+  numberOfCarousellItems = 0;
+}
+else if (screen.width < 1100) {
+  numberOfCarousellItems = 2;
+}
+
 
 
 
@@ -107,22 +107,23 @@ const renderCarousel = (posts) => {
           <div class= "p-inside-carousell-image-card">${post.excerpt.rendered}</div>
               <div class="box-3">
             
-                <div class="btn btn-three">
-                      
-         <a href="posts.html"> Read more    </div>
-            </div>
+       
         
           
-</a>  
+
     </div>
     
     `
+ //         <div class="btn btn-three">
+                      
+        //  <a href="posts.html">view more</a>  
+        //  </div>
+        //     </div>
 
-          
 
 
 
-    
+
     postCarousel.innerHTML += htmlString;
   }
 }
