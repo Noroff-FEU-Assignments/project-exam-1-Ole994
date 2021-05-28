@@ -366,7 +366,7 @@ a {
 }
 
 .about-me-frontpage-img {
-  max-width: 100%;
+  width: 40%;
 }
 
 .aboutMe-frontpage-div {
@@ -832,7 +832,8 @@ ul {
   justify-content: space-evenly;
   flex-direction: row;
   align-items: center;
-  width: 40%;
+  width: 60%;
+ 
   margin-right: 20px;
   padding: 0;
 }
