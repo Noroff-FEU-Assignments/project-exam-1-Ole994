@@ -34,7 +34,7 @@ const renderPost = (post) => {
                   
                 </div>
                 <div class="post-text-post-page"> 
-                  ${post.excerpt.rendered}
+                  ${post.content.rendered}
                 </div>
               </div>            
             `
@@ -45,7 +45,7 @@ const renderPost = (post) => {
   const modalImg = document.querySelector(".modal-img")
 
   postImage.addEventListener("click", () => {
-    modalDiv.style.display = "block";
+    modalDiv.style.display = "flex";
 
     let largeImageUrl = post._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url;
     modalImg.setAttribute("src", largeImageUrl)

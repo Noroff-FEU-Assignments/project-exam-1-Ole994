@@ -267,7 +267,7 @@ a {
 }
 
 .achievements-as-dj {
-  size: 100%;
+  
   border-top: 2px solid white;
   display: flex;
   justify-content: space-between;
@@ -605,9 +605,9 @@ h3 {
 .img-cards-single-post-post-page{
   
  border-radius: 10%;
- width: 100%;
+ width: 500px;
  object-fit: fill;
-  border: 2px solid rgb(57, 68, 90);
+  border: 5px solid rgb(86, 93, 107);
 }
 
 .post-text-post-page{
@@ -627,21 +627,28 @@ top: 0;
 left: 0;
 right: 0;
 bottom: 0;
-display: none;
+display: none; 
+flex-direction: column;
+justify-content: center;
+align-items: center;
 z-index: 999;
+
 }
 
 .modal-img{
-  width: 60%;
-  margin: 0 20%;
+  width: 50%;
+  margin: auto;
   border-radius: 5%;
 }
 
 
 
 
-/* .close-button-modal{
-} */
+
+
+ .close-button-modal{
+
+} 
 
 
 
@@ -801,7 +808,6 @@ border-bottom: 2px solid white;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    border: 22px solid red;
   }
 
 
@@ -817,9 +823,8 @@ border-bottom: 2px solid white;
   }
 
   .img-cards-single-post-post-page{
-  
     border-radius: 10%;
-    width: 100%;
+    width: 350px;
    }
  
 
@@ -833,6 +838,36 @@ border-bottom: 2px solid white;
     text-align: center;
     margin-top: 5px;
     }
+
+
+
+    .post-image{
+      width: 50%;
+      height: 50%;
+    }
+
+    
+    .modal-img{
+      width: 400px;
+      margin: auto;
+      border-radius: 5%;
+      
+
+    }
+
+    .image-modal-div{
+      
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      }
 
 }
 
