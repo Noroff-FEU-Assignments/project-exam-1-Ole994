@@ -545,13 +545,15 @@ h3 {
 
   display: flex;
   justify-content: center;
- 
+  height: 40%;
+  width: 80%;
 }
 
 .img-cards-single-post-post-page{
   
  border-radius: 10%;
  width: 80%;
+ object-fit: cover;
 }
 
 .post-text-post-page{
@@ -759,6 +761,12 @@ border-bottom: 2px solid white;
   .post-content-post-page > :first-child {
     height: 700px;
   }
+
+  .img-cards-single-post-post-page{
+  
+    border-radius: 10%;
+    width: 100%;
+   }
  
 
   .post-title,
