@@ -18,6 +18,8 @@ console.log(message)
 
 const button = document.querySelector("#submitFormButton");
 
+const succsess = document.querySelector(".succsess");
+
 function validateForm(e) {
     e.preventDefault();
 
@@ -52,7 +54,7 @@ function validateForm(e) {
 
 
     if (!emailPattern.test(submittedEmail)) {
-        emailMsg.innerHTML = "Please enter a valid email";
+        emailError.innerHTML = "Please enter a valid email";
     }
 
     let subjectPattern = subject.value.trim()
@@ -70,10 +72,10 @@ function validateForm(e) {
 
     if (nameMsg.innerHTML === "" && emailMsg.innerHTML === "" && subjectError.innerHTML === "" && messageError.innerHTML === "") {
         console.log("Form submitted");
+        succsess.innerHTML += "succsess";
+
         //form.submit();
-    } else {
-        console.log("Still validation errors");
-    }
+     }
 
 }
 

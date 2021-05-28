@@ -388,7 +388,6 @@ a {
   flex-direction: column;
   width: 40%;
   margin: auto;
-
 }
 
 
@@ -839,7 +838,17 @@ border-bottom: 2px solid white;
 
 
 
-
+/*Contact media*/
+@media (max-width: 450px){
+  .form-container{
+  transform: translateX(-60px);
+}
+}
+@media (min-width: 450px){
+  .form-container{
+  transform: translateX(-20px);
+}
+}
 
 
 
