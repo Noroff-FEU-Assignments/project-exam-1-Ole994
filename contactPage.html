@@ -79,52 +79,70 @@
 
 
 <div class="message"></div>
-    <form id="signup">
-        
+<form class="form-container" id="signup">
 
-        <fieldset>
-            <legend>
-                <h2>Contact <menu></menu>
-                </h2>
-            </legend>
-            <div>
-                <label for="name">Name</label>
 
-                <input type="text" id="name" name="name">
+    <fieldset>
+        <legend>
+            <h2>Contact <menu></menu>
+            </h2>
+        </legend>
+
+        <div class="container-for-all-label-input-span-and-p">
+
+            <div class="container-for-single-label-input-span-and-p">
+                <div class="flex-label-and-input">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
+                </div>
+
                 <span id="nameMsg"></span>
                 <p id="name-error"></p>
             </div>
 
 
-            <div>
-                <label for="email">email</label>
+            <div class="container-for-single-label-input-span-and-p">
 
-                <input type="text" id="email" name="email">
-                <span id="emailMsg"></span>
-                <p id="email-error" class="hidden"></p>
+                
+                    <div class="flex-label-and-input">
+                        <label for="email">email</label>
+                        <input type="text" id="email" name="email">
+                    </div>
+
+                    <span id="emailMsg"></span>
+                    <p id="email-error" class="hidden"></p>
+                
             </div>
 
-            <div>
-                <label for="email">subject</label>
 
-                <input type="text" id="subject" name="subject">
-                <span id="subjectMsg"></span>
-                <p id="subject-error"></p>
+
+            <div class="container-for-single-label-input-span-and-p">
+
+                
+                    <div class="flex-label-and-input">
+                        <label for="email">subject</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+
+                    <span id="subjectMsg"></span>
+                    <p id="subject-error"></p>
             </div>
 
-            <div>
+            <div class="flex-label-and-input">
                 <label for="error"> Textarea</label>
                 <textarea name="" id="message" cols="30" rows="10" placeholder="Enter your message"></textarea>
-                <p id="message-error"></p>
-            </div>
+            </div>   
+             <p id="message-error"></p>
+            
 
             <div>
-                <input id="submitFormButton" type="submit" value="submit">
+                <input id="submitFormButton" class="submit-field" type="submit" value="submit">
             </div>
+        </div>
 
-        </fieldset>
+    </fieldset>
 
-    </form>
+</form>
 
 
 

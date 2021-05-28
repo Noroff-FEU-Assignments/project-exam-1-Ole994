@@ -21,13 +21,14 @@ fetch(url, {
   .finally(()=> loading.style.display = "none");
 
 const template = (posts) => {
+  console.log(posts)
   for (post of posts) {
     console.log(post.title)
     let imageUrl = post._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
     let htmlString = `
     <div class"image-card-postsPage>
     <div class="post-title"><h2>${post.title.rendered}</h2></div>
-    <div class="post-image"> <a class="navbar-links" href="post.html?id=${post.id}"><img class= "img-cards-single-post"src = "${imageUrl}"/></a>
+    <div class="posts-image"> <a class="navbar-links" href="post.html?id=${post.id}"><img class= "img-cards-single-posts"src = "${imageUrl}"/></a>
     </div>
      ${post.excerpt.rendered}
     </div>

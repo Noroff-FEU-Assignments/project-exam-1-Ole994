@@ -46,19 +46,19 @@ function validateForm(e) {
     // Validate e-mail
     let submittedEmail = email.value.trim();
     emailError.innerHTML = ""; // Clear earlier messages
-    let emailPattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    let emailPattern = /^(([^<>()[]\.,;:\s@"]+(.[^<>()[]\.,;:\s@"]+)*)|(".+"))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$/
 
     //email pattern
 
 
     if (!emailPattern.test(submittedEmail)) {
-        emailMsg.innerHTML += "Please enter a valid email";
+        emailMsg.innerHTML = "Please enter a valid email";
     }
 
     let subjectPattern = subject.value.trim()
     subjectError.innerHTML = "";
     if (subjectPattern.length < 10) {
-        subjectError.innerHTML += "Please enter a valid em";
+        subjectError.innerHTML = "Please enter a valid email";
     }
 
     let messagePattern = message.value.trim()

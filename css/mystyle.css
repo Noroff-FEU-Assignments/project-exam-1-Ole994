@@ -12,7 +12,9 @@ body {
   font-family: "Amiri", serif;
   font-size: 18px;
 }
-
+button{
+  background-color: rgb(97, 86, 116);
+}
 h1,
 h2,
 h3,
@@ -300,7 +302,7 @@ a {
   border: none;
   color: white;
   position: absolute;
-  top: 40%;
+  top: 35%;
   
 
 }
@@ -314,7 +316,7 @@ a {
   color: white;
    position: absolute;
    right: 0;
-   top: 40%;
+   top: 35%;
 }
 
 .image-card-homepage {
@@ -346,7 +348,7 @@ a {
 
 .view-more-button-home-page {
   color: white;
-  background-color: rgb(97, 86, 116);
+  
   border-radius: 30px;
   width: 100px;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
@@ -373,10 +375,51 @@ a {
   display: flex;
   align-items: center;
   flex-direction: column;
-  border: 22px solib red;
+  border: 2px solid rgb(85, 84, 122);
+  margin-top: 120px;
 }
 
 /*Contact-page*/
+
+.form-container{
+  display: flex;
+  justify-content: space-between;
+  height: 700px;
+  flex-direction: column;
+  width: 40%;
+  margin: auto;
+
+}
+
+
+.flex-label-and-input{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+fieldset{
+  height: 100%;
+}
+
+.container-for-all-label-input-span-and-p{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.submit-field{
+  background-color: rgb(97, 86, 116);
+  border-radius: 20%;
+  color: white;
+}
+
+
+
+
+
+
 
 /* Remove outline of all elements on focus */
 
@@ -516,11 +559,12 @@ h3 {
 
 
 
-
-.img-cards-single-post {
+.img-cards-single-posts{
   width: 100%;
-  
+  height:200px;
+  object-fit: fill;
 }
+
 
 
 
@@ -542,18 +586,29 @@ h3 {
 }
 
 .post-image {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  height: 500px;
+  margin: auto;
+  
+}
+
+.posts-image {
 
   display: flex;
   justify-content: center;
-  height: 40%;
-  width: 80%;
+  height: 200px;
+  width: 300px;
+ 
 }
 
 .img-cards-single-post-post-page{
   
  border-radius: 10%;
- width: 80%;
- object-fit: cover;
+ width: 100%;
+ object-fit: fill;
+  border: 2px solid rgb(57, 68, 90);
 }
 
 .post-text-post-page{
@@ -909,7 +964,6 @@ ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
     text-align: center;
     padding: 50px;
   }

@@ -22,7 +22,7 @@ fetch(url, {
 const renderPost = (post) => {
 
   console.log(post)
-  let imageUrl = post._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url;
+  let imageUrl = post._embedded["wp:featuredmedia"][0].source_url;
   let htmlString = `
       
               <div class"image-card-postPage">
