@@ -545,18 +545,18 @@ h3 {
 
   display: flex;
   justify-content: center;
+ 
 }
 
 .img-cards-single-post-post-page{
   
  border-radius: 10%;
- width: 50%;
+ width: 80%;
 }
 
 .post-text-post-page{
-  margin-top: 250px;
-  margin-bottom: 250px;
-
+text-align: center;
+margin-top: 50px;
 }
 
 
@@ -733,12 +733,12 @@ border-bottom: 2px solid white;
   .image-card-postPage {
     /* border: 2px solid rgb(111, 70, 153); */
     border-radius: 5px;
-    width: 300px;
-    /* box-shadow: rgba(230, 215, 215, 0.25) 0px 54px 55px,
+    
+    box-shadow: rgba(230, 215, 215, 0.25) 0px 54px 55px,
       rgba(165, 154, 154, 0.12) 0px -12px 30px,
       rgba(255, 255, 255, 0.12) 0px 4px 6px,
       rgba(255, 255, 255, 0.17) 0px 12px 13px,
-      rgba(243, 243, 243, 0.09) 0px -3px 5px; */
+      rgba(243, 243, 243, 0.09) 0px -3px 5px;
     margin: 20px 20px;
     display: flex;
     flex-direction: column;
@@ -756,11 +756,6 @@ border-bottom: 2px solid white;
      
   }
   
-.post-text-post-page{
-
-  
-
-}
   .post-content-post-page > :first-child {
     height: 700px;
   }
@@ -771,7 +766,14 @@ border-bottom: 2px solid white;
     height: 150px;
     padding: 5px;
   }
+
+  .post-text-post-page{
+    text-align: center;
+    margin-top: 5px;
+    }
+
 }
+
 
 
 
