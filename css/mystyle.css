@@ -628,6 +628,11 @@ border-bottom: 2px solid white;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+  
+  }
+
+  .about-me-frontpage-img {
+    width: 100%;
   }
 
   .aboutMe-frontpage-p {
