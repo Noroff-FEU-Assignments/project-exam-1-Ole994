@@ -26,7 +26,6 @@ fetch(url, {
 /* Sjekker with på vindu for å tilpasse antall elementer i karusellen*/
 // Vi kan bruke window.innerWidth for å sjekke hvor vid skjermen er
 // og sette antall elementer i karusell vi ønsker å vise.
-
 // Kan brukes sammen med resize-event.
 
 window.addEventListener("resize", () => {
@@ -41,8 +40,6 @@ window.addEventListener("resize", () => {
 
     numberOfCarousellItems = 3;
   }
-
-
   //   // Endre antall kort vi viser ved å endre numberOfCarousellItems. 
   renderCarousel(posts);
 });
@@ -54,15 +51,11 @@ else if (screen.width < 1100) {
   numberOfCarousellItems = 2;
 }
 
-
-
-
-
 /*skriver dom element for karusellen */
 const renderCarousel = (posts) => {
   console.log(posts)
 
-  // Vi tømmer DOM-treet for elementer, siden vi skal bygge de nå 
+  // tømmer DOM-treet for elementer, siden det skal bygges 
   // på nytt med nye data. 
 
   postCarousel.innerHTML = "";
@@ -79,7 +72,7 @@ const renderCarousel = (posts) => {
 
     // showCard er true dersom index er større eller lik activeCarouselStart og
     // og mindre eller lik activeCarouselEnd. 
-    // Dette definerer hvilket intervall vi ønsker å vise aktive poster i karusellen.
+    // Dette definerer hvilket intervall som ønsker å vise aktive poster i karusellen.
 
 
     // Hvis man er innenfor intervallet start-index og start-index + antall kort som skal vises:
@@ -106,40 +99,24 @@ const renderCarousel = (posts) => {
 
           <div class= "p-inside-carousell-image-card">${post.excerpt.rendered}</div>
               <div class="box-3">
-            
-       
-        
-          
-
     </div>
     
     `
- //         <div class="btn btn-three">
-                      
-        //  <a href="posts.html">view more</a>  
-        //  </div>
-        //     </div>
-
-
-
-
-
     postCarousel.innerHTML += htmlString;
   }
 }
 
-/**/
 carouselButtonPrevious.addEventListener(`click`, () => {
-  // Vi trekker fra en fra indeks for start på hvilke kort vi vider,
-  // dersom vi ikke går under 0. Viser alltid elementer i karusellen fra
-  // index 0 og oppover. 
 
+  // Det trekkes fra en fra indeks for start på hvilke kort en vider,
+  // dersom ikke går under 0. Viser alltid elementer i karusellen fra
+  // index 0 og oppover. 
   if (activeCarouselStart > 0) {
     activeCarouselStart--;
   }
 
-  // Etter at vi har oppdatert variabel for hvilken indeks vi skal vise
-  // karusell-element for, må vi skrive nye HTML-elementer til DOM-treet. 
+  // Etter at enhar oppdatert variabel for hvilken indeks som skal vise
+  // karusell-element for, må det skrives nye HTML-elementer til DOM-treet. 
   // I praksis: oppdatere karusell med riktige elementer. 
   renderCarousel(posts);
 });
@@ -152,12 +129,12 @@ carouselButtonNext.addEventListener(`click`, () => {
   activeCarouselStart++;
 
   /*Hvis en har komt til slutten av postene, begynn fra start*/
-  // Alternativt kan vi slå av knappen? 
+  // Alternativt kan slå av knappen 
   if (activeCarouselStart === posts.length) {
     activeCarouselStart = 0;
   }
 
-  // Etter at vi har oppdatert variabel for hvilken indeks vi skal vise
+  // Etter at vi har oppdatert variabel for hvilken indeks  skal vise
   // karusell-element for, må vi skrive nye HTML-elementer til DOM-treet. 
   // I praksis: oppdatere karusell med riktige elementer. 
   renderCarousel(posts);

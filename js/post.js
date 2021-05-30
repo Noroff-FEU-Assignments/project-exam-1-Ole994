@@ -37,24 +37,17 @@ const renderPost = (post) => {
               </div>            
             `
 
-            postContent.innerHTML += htmlString;
-            const postImage = document.querySelector(".img-cards-single-post-post-page")
-            console.log(postImage)
-            const modalImg = document.querySelector(".modal-img")
+  postContent.innerHTML += htmlString;
+  const postImage = document.querySelector(".img-cards-single-post-post-page")
+  console.log(postImage)
+  const modalImg = document.querySelector(".modal-img")
 
-            postImage.addEventListener("click", () => {
-              modalDiv.style.display = "flex";
-          
-              let largeImageUrl = post._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url;
-              modalImg.setAttribute("src", largeImageUrl)
-          
-              
-                    
-                      
-              
-          
-                    
-              
-              
-            
-            })}
+  postImage.addEventListener("click", () => {
+    modalDiv.style.display = "flex";
+
+    let largeImageUrl = post._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url;
+    modalImg.setAttribute("src", largeImageUrl)
+
+
+  })
+}
