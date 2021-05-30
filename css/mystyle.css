@@ -538,8 +538,8 @@ h1 {
 .post-image {
   display: flex;
   justify-content: center;
-  width: 60%;
-  height: 500px;
+  width: 70%;
+  height: 250px;
   margin: auto;
 
 }
@@ -559,26 +559,13 @@ h1 {
   border: 5px solid rgb(86, 93, 107);
 }
 
-.post-text-post-page {
-  margin-top: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 800px;
-  text-align: center;
-}
 
-.flex-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 
-}
 
 .post-p-post-page {
   display: flex;
   flex-direction: column;
-  height: 70px;
+  height: -7000px;
 }
 
 .image-modal-div {
@@ -780,10 +767,6 @@ h1{
 
   }
 
-  .post-content-post-page> :first-child {
-    height: 700px;
-  }
-
   .img-cards-single-post-post-page {
     border-radius: 10%;
     width: 300px;
@@ -792,7 +775,6 @@ h1{
 
   .post-title,
   .post-text {
-
     display: flex;
     justify-content: center;
   }
@@ -809,14 +791,18 @@ h1{
 
     display: hidden;
   }
-  .post-text-post-page{
-  font-size: 16px;
-  }
+
   .flex-text{
-   width: 200%;
+   width: 20%;
   }
+
   .post-image{
     width: 20%;
+  }
+
+  .post-text-post-page{
+    margin: auto;
+    font-size: 14px;
   }
 }
 
@@ -830,6 +816,9 @@ h1{
 @media (min-width: 450px) {
   .form-container {
     transform: translateX(-20px);
+      width: 90%;
+      margin: 0 auto;
+    }
   }
 
   .next-button {
@@ -843,7 +832,7 @@ h1{
     right: 0;
     top: 35%;
   }
-}
+
 
 /*POSTS PAGE*/
 .posts-content-Posts-Page {
@@ -966,6 +955,12 @@ ul {
     width: 75%;
     margin-top: 2px;
     border-radius: 2%;
+  }
+
+  .post-text-post-page{
+    font-size: 40px;
+    margin-top: 300px;
+    margin-left: 150px;
   }
 
 }
