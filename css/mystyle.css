@@ -629,9 +629,6 @@ h1{
   font-size: 20px;
 }
 
-
-
-  
   /*Homepage media*/
   .container-homepge {
     border-bottom: 2px solid white;
@@ -764,9 +761,6 @@ h1{
 
   }
 
-  
-  
-
   .post-content-post-page {
     display: flex;
     flex-direction: column;
@@ -797,12 +791,6 @@ h1{
   .image-modal-div {
 
     display: hidden;
-  }
-
-  
-
-  .post-image{
-    width: 20%;
   }
 
   .post-text-post-page{
@@ -889,8 +877,6 @@ ul {
   margin-right: 20px;
   padding: 0;
 }
-
-
 
 /*Desktop big*/
 @media (min-width: 1200px) {
@@ -1137,8 +1123,7 @@ ul {
 }
 
 @media (max-width: 976px){
-  .post-text-post-page{
-    
-    
+  .img-cards-single-post-post-page{
+    height: 7000px;
   }
 }
