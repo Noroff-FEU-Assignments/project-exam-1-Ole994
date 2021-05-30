@@ -53,14 +53,14 @@ function validateForm(e) {
 
     let subjectPattern = subject.value.trim()
     subjectError.innerHTML = "";
-    if (subjectPattern.length < 10) {
-        subjectError.innerHTML = "Please have at least 10 digits";
+    if (subjectPattern.length < 15) {
+        subjectError.innerHTML = "Please have at least 15 digits";
     }
 
     let messagePattern = message.value.trim()
     messageError.innerHTML = "";
     if (messagePattern.length < 25) {
-        messageError.innerHTML += "Please enter at least 15 digits";
+        messageError.innerHTML += "Please enter at least 25 digits";
     }
 
 
