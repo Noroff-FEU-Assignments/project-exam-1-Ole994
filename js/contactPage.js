@@ -35,7 +35,7 @@ function validateForm(e) {
         nameError.innerHTML += "The name cannot contain any digits!";
     }
     if (submitName < 5) {
-        nameError.innerHTML = "Dette går ikkke"
+        nameError.innerHTML = "Please insert your name"
     }
 
 
@@ -60,7 +60,7 @@ function validateForm(e) {
     let subjectPattern = subject.value.trim()
     subjectError.innerHTML = "";
     if (subjectPattern.length < 10) {
-        subjectError.innerHTML = "Please enter a valid email";
+        subjectError.innerHTML = "Please have at least 10 digits";
     }
 
     let messagePattern = message.value.trim()
@@ -72,7 +72,7 @@ function validateForm(e) {
 
     if (nameMsg.innerHTML === "" && emailMsg.innerHTML === "" && subjectError.innerHTML === "" && messageError.innerHTML === "") {
         console.log("Form submitted");
-        succsess.innerHTML += "succsess";
+        succsess.innerHTML += "Thank you, I will get back to you as soon as possible";
 
         //form.submit();
      }

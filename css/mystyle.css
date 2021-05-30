@@ -13,7 +13,12 @@ body {
   font-size: 18px;
 }
 button{
-  background-color: rgb(97, 86, 116);
+  background-color: rgb(103, 118, 206);
+  color: white;
+  border-radius: 30%;
+  width: 100px;
+  height: 70px;
+  box-shadow: rgba(89, 111, 145, 0.24) 0px 3px 8px;
 }
 h1,
 h2,
@@ -330,6 +335,8 @@ a {
   margin-top: 120px;
 }
 /*Contact-page*/
+
+
 .form-container{
   display: flex;
   justify-content: space-between;
@@ -344,8 +351,13 @@ a {
   justify-content: space-between;
 }
 fieldset{
-  height: 100%;
+  height: 900%;
+  
 }
+form{
+  padding-bottom: 200px;
+}
+
 .container-for-all-label-input-span-and-p{
   height: 100%;
   display: flex;
@@ -356,6 +368,9 @@ fieldset{
   background-color: rgb(97, 86, 116);
   border-radius: 20%;
   color: white;
+  width: 200px;
+  height: 75px;
+ 
 }
 /* Remove outline of all elements on focus */
 h3 {
@@ -363,7 +378,8 @@ h3 {
 }
 /*About me*/
 .p-about-me-page{
-  font-size: 20px;
+  font-size: 25px;
+margin: 2px;
 }
 .picture-and-text {
   display: flex;
@@ -454,16 +470,7 @@ h3 {
   flex-wrap: wrap;
   height: 800px;
 } */
-.post-content-post-page{
-  display: flex;
-  justify-content: center;
-  
-  box-shadow: rgba(230, 215, 215, 0.25) 0px 54px 55px,
-    rgba(165, 154, 154, 0.12) 0px -12px 30px,
-    rgba(255, 255, 255, 0.12) 0px 4px 6px,
-    rgba(255, 255, 255, 0.17) 0px 12px 13px,
-    rgba(243, 243, 243, 0.09) 0px -3px 5px;
-}
+
 .img-cards-single-posts{
   width: 100%;
   height:200px;
@@ -472,6 +479,26 @@ h3 {
 .posts-content-Posts-Page > div {
   height: 800px;
 }
+
+.post-content-post-page{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  box-shadow: rgba(230, 215, 215, 0.25) 0px 54px 55px,
+    rgba(165, 154, 154, 0.12) 0px -12px 30px,
+    rgba(255, 255, 255, 0.12) 0px 4px 6px,
+    rgba(255, 255, 255, 0.17) 0px 12px 13px,
+    rgba(243, 243, 243, 0.09) 0px -3px 5px;
+}
+h1{
+  font-size: 80px;
+}
+
+.h2-post-page{
+  text-align: center;
+  font-size: 50px;
+}
+
 .post-title,
 .post-text {
   height: 150px;
@@ -497,30 +524,35 @@ h3 {
 
 .img-cards-single-post-post-page{
   border-radius: 10%;
-  width: 500px;
+  height: 500px;
+  width: 1200px;
   object-fit: fill;
    border: 5px solid rgb(86, 93, 107);
  }
 
  .post-text-post-page{
-margin-top: 50px;
-margin-bottom: 500px;
+margin-top: 100px;
 display: flex;
 flex-direction: column;
 align-items: center;
-height: 70px;
+height: 800px;
+text-align: center;
 }
+
+
+
 
 .flex-text{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
 }
 
 .post-p-post-page{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  
   height: 70px;
 }
  
@@ -541,14 +573,8 @@ z-index: 999;
 }
 
 
-.modal-img{
-  width: 50%;
-  margin: auto;
-  border-radius: 5%;
-}
- /* .close-button-modal{
 
-}  */
+
 
 .image-about-me-page {
   width: 300px;
@@ -561,13 +587,23 @@ z-index: 999;
 }
 .text-about-me-page p {
   padding-bottom: 40px;
-  margin: 40px;
 }
 
 @media (max-width: 976px) {
   header {
     max-width: 100%;
   }
+
+  .h1-about-me-page
+  {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .h2-about-me-page{
+    font-size: 18px;
+  }
+
   /*Homepage*/
 .container-homepge{
 border-bottom: 2px solid white;
@@ -635,6 +671,7 @@ border-bottom: 2px solid white;
     /* justify-content: space-between; */
     flex-direction: column;
     
+    
     align-items: center;
     font-size: 40px;
   }
@@ -666,7 +703,6 @@ border-bottom: 2px solid white;
 
    /*Post-Page media*/
    .image-card-postPage {
-    /* border: 2px solid rgb(111, 70, 153); */
     border-radius: 5px;
     
     box-shadow: 
@@ -681,6 +717,8 @@ border-bottom: 2px solid white;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    
+    
    }
 
    .post-content-post-page {
@@ -696,24 +734,19 @@ border-bottom: 2px solid white;
 
   .img-cards-single-post-post-page{
     border-radius: 10%;
-    width: 350px;
+    width: 300px;
+    height: 200px;
    } 
 
 
-   .post-title,
+  .post-title,
   .post-text {
-    height: 150px;
-    padding: 5px;
+    
+    display: flex;
+    justify-content: center;
   }
-  .post-text-post-page{
-    text-align: center;
-    margin-top: 5px;
-    }
-    .post-image{
-      width: 50%;
-      height: 50%;
-    }
-
+    
+    
 
     .modal-img{
       width: 400px;
@@ -850,6 +883,15 @@ ul {
     text-align: center;
     padding: 50px;
   }
+
+  .modal-img{
+    width: 75%;
+    margin-top:2px;
+    border-radius: 2%;
+  }
+
+
+
 }
 .footer-all{
 	background-color: #292c2f;

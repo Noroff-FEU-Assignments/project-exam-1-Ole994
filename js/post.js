@@ -22,7 +22,7 @@ const renderPost = (post) => {
   let htmlString = `
       
               <div class"image-card-postPage">
-                  <div class="post-title"><h2>${post.title.rendered}</h2></div>
+                  <div class="post-title"><h2 class= "h2-post-page">${post.title.rendered}</h2></div>
               
                 <div class="post-image">
                             
