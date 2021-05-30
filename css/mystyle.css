@@ -408,7 +408,10 @@ form {
 
 h3 {
   text-align: center;
+}
 
+.red-text{
+  color: red;
 }
 
 /*About me*/
@@ -560,8 +563,6 @@ h1 {
 }
 
 
-
-
 .post-p-post-page {
   display: flex;
   flex-direction: column;
@@ -598,6 +599,10 @@ h1 {
 .text-about-me-page p {
   padding-bottom: 40px;
 }
+.post-text-post-page{
+  
+  text-align: center;
+ }
 
 @media (max-width: 976px) {
   header {
@@ -624,9 +629,8 @@ h1{
   font-size: 20px;
 }
 
-.red-text{
-  color: red;
-}
+
+
   
   /*Homepage media*/
   .container-homepge {
@@ -760,6 +764,9 @@ h1{
 
   }
 
+  
+  
+
   .post-content-post-page {
     display: flex;
     flex-direction: column;
@@ -792,9 +799,7 @@ h1{
     display: hidden;
   }
 
-  .flex-text{
-   width: 20%;
-  }
+  
 
   .post-image{
     width: 20%;
@@ -809,18 +814,9 @@ h1{
 /*Contact media*/
 @media (max-width: 450px) {
   .form-container {
-    transform: translateX(-60px);
+    margin-left: 50px;
   }
 }
-
-@media (min-width: 450px) {
-  .form-container {
-    transform: translateX(-20px);
-      width: 90%;
-      margin: 0 auto;
-    }
-  }
-
   .next-button {
     flex-shrink: 1;
     align-self: center;
@@ -894,6 +890,8 @@ ul {
   padding: 0;
 }
 
+
+
 /*Desktop big*/
 @media (min-width: 1200px) {
   header {
@@ -960,7 +958,7 @@ ul {
   .post-text-post-page{
     font-size: 40px;
     margin-top: 300px;
-    margin-left: 150px;
+    
   }
 
 }
@@ -1135,5 +1133,12 @@ ul {
 
   .footer-all .footer-center i {
     margin-left: 0;
+  }
+}
+
+@media (max-width: 976px){
+  .post-text-post-page{
+    
+    
   }
 }
